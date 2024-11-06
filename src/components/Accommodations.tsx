@@ -418,16 +418,15 @@ export default function Accommodations() {
                       </div>
                     ) : (
                       <div className="w-[250px] h-[250px] flex items-center justify-center">
-                        {index === 0 && <FaBed className="w-40 h-40 text-gray-600" />}
-                        {index === 1 && <FaBed className="w-40 h-40 text-gray-600" />}
-                        {index === 2 && <FaBed className="w-40 h-40 text-gray-600" />}
-                        {index === 3 && <FaBed className="w-40 h-40 text-gray-600" />}
-                        {index === 4 && <FaCouch className="w-40 h-40 text-gray-600" />}
-                        {index === 5 && <MdKitchen className="w-40 h-40 text-gray-600" />}
-                        {index === 6 && <MdLocalDining className="w-40 h-40 text-gray-600" />}
-                        {index === 7 && <FaHouse className="w-40 h-40 text-gray-600" />}
-                        {index === 8 && <FaWifi className="w-40 h-40 text-gray-600" />}
-                        {index === 9 && <FaUmbrellaBeach className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'bedroom-1' && <FaBed className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'bedroom-2' && <FaBed className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'bedroom-4' && <FaBed className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'living-room' && <FaCouch className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'living-area' && <MdKitchen className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'kitchen' && <MdLocalDining className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'dining-room' && <FaHouse className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'home-office' && <FaWifi className="w-40 h-40 text-gray-600" />}
+                        {acc.id === 'backyard' && <FaUmbrellaBeach className="w-40 h-40 text-gray-600" />}
                       </div>
                     )}
                   </div>
