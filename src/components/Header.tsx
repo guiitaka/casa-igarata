@@ -39,14 +39,14 @@ export default function Header({}: HeaderProps) {
                      transition-all duration-300 
                      hover:text-white/80"
           >
-            Chácara Azul
+            Casa Igaratá
           </a>
 
           {/* Menu de Navegação */}
           <nav className="flex items-center gap-12">
             <a 
               href="#features" 
-              className="text-2xl font-extralight tracking-wide text-white/80 
+              className="text-lg font-light text-white/90
                        transition-colors duration-300 
                        hover:text-white"
             >
@@ -55,7 +55,7 @@ export default function Header({}: HeaderProps) {
             
             <a 
               href="#gallery" 
-              className="text-2xl font-extralight tracking-wide text-white/80 
+              className="text-lg font-light text-white/90
                        transition-colors duration-300 
                        hover:text-white"
             >
@@ -64,7 +64,7 @@ export default function Header({}: HeaderProps) {
             
             <a 
               href="#location" 
-              className="text-2xl font-extralight tracking-wide text-white/80 
+              className="text-lg font-light text-white/90
                        transition-colors duration-300 
                        hover:text-white"
             >
@@ -73,7 +73,7 @@ export default function Header({}: HeaderProps) {
             
             <a 
               href="#contact" 
-              className="text-2xl font-extralight tracking-wide text-white/80 
+              className="text-lg font-light text-white/90
                        transition-colors duration-300 
                        hover:text-white"
             >
@@ -81,13 +81,12 @@ export default function Header({}: HeaderProps) {
             </a>
 
             {/* Botão Reserve Agora */}
-            <a 
-              href="#contact" 
-              className="text-2xl font-extralight tracking-wide text-white 
-                       transition-all duration-300 
-                       hover:text-white 
-                       hover:scale-105
-                       hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]"
+            <a
+              href="#contact"
+              className="px-6 py-2 bg-transparent border border-white/20
+                       text-lg font-light text-white
+                       transition-all duration-300
+                       hover:bg-white/10"
             >
               Reserve Agora
             </a>

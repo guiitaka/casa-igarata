@@ -9,6 +9,6 @@ declare global {
 }
 
 export interface BaseProps {
-  children?: ReactNode;
   className?: string;
+  children?: ReactNode;
 } 
