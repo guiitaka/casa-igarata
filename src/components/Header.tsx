@@ -21,14 +21,14 @@ export default function Header() {
       <motion.header 
         className={`transition-all duration-500 ${
           isScrolled 
-            ? 'mt-4 bg-black/80 backdrop-blur-sm' 
-            : 'mt-8'
-        }`}
+            ? 'mt-4 bg-black/80' 
+            : 'mt-8 bg-white/20'
+        } backdrop-blur-sm`}
         initial={{ y: 0 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="px-8 py-4 rounded-full border border-white/10 bg-black/20">
+        <div className="px-8 py-4 rounded-full border border-white/10">
           <div className="flex items-center gap-24">
             {/* Logo */}
             <a 
@@ -37,7 +37,7 @@ export default function Header() {
                        transition-all duration-300 
                        hover:text-white/80"
             >
-              Casa Igaratá
+              Chácara Azul
             </a>
 
             {/* Menu de Navegação */}
