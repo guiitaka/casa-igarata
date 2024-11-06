@@ -53,7 +53,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/suite-master3.jpeg',
       '/images/casa/suite-master4.jpeg',
     ],
-    icon: '/images/icons/cama-icone.png',
+    icon: '/images/icons/CamaIcone.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal king size' },
       { icon: FaShirt, text: 'Cabides' },
@@ -101,15 +101,15 @@ const accommodations: Accommodation[] = [
     ]
   },
   {
-    id: 'bedroom-4',
-    title: 'Quarto 4',
+    id: 'bedroom-3',
+    title: 'Quarto 3',
     description: 'Ambiente tranquilo e aconchegante',
     images: [
       '/images/casa/quarto4-1.jpeg',
       '/images/casa/quarto4-2.jpeg',
       '/images/casa/quarto4-3.jpeg',
     ],
-    icon: '/images/icons/Quarto4.png',
+    icon: '/images/icons/Quarto3.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal confortável' },
       { icon: FaShirt, text: 'Guarda-roupa' },
@@ -130,7 +130,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/sala5.jpeg',
       '/images/casa/sala6.jpeg',
     ],
-    icon: '/images/icons/sala-icone.png',
+    icon: '/images/icons/SalaIcone.png',
     amenities: [
       { icon: FaCouch, text: 'Sofá confortável' },
       { icon: FaTv, text: 'Smart TV 55"' },
