@@ -28,7 +28,8 @@ import {
   FaChair,
   FaLaptop,
   FaTree,
-  FaDiceD6
+  FaDiceD6,
+  FaFire
 } from 'react-icons/fa6';
 import { MdKitchen, MdLocalDining, MdKingBed, MdOutlineKitchen, MdMeetingRoom, MdPool } from 'react-icons/md';
 import { IoBed, IoGameController, IoBarbellSharp } from 'react-icons/io5';
@@ -409,14 +410,14 @@ export default function Accommodations() {
                       {acc.id === 'bedroom-2' && <BiSolidBed className="w-40 h-40 text-gray-600" />}
                       {acc.id === 'bedroom-3' && <IoBed className="w-40 h-40 text-gray-600" />}
                       
-                      {/* Áreas comuns */}
-                      {acc.id === 'living-room' && <FaHouseChimney className="w-40 h-40 text-gray-600" />}
+                      {/* Áreas atualizadas */}
+                      {acc.id === 'living-room' && <FaTv className="w-40 h-40 text-gray-600" />}
                       {acc.id === 'living-area' && <MdPool className="w-40 h-40 text-gray-600" />}
                       {acc.id === 'kitchen' && <MdOutlineKitchen className="w-40 h-40 text-gray-600" />}
                       {acc.id === 'dining-room' && <FaChair className="w-40 h-40 text-gray-600" />}
                       {acc.id === 'home-office' && <FaLaptop className="w-40 h-40 text-gray-600" />}
-                      {acc.id === 'backyard' && <FaTree className="w-40 h-40 text-gray-600" />}
-                      {acc.id === 'leisure' && <IoGameController className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'backyard' && <FaUmbrellaBeach className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'leisure' && <FaFire className="w-40 h-40 text-gray-600" />}
                     </div>
                   </div>
                 </motion.div>
