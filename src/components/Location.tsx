@@ -41,7 +41,7 @@ export default function Location({}: LocationProps) {
           playsInline
           className="absolute w-full h-full object-cover"
         >
-          <source src="/background-loc.mp4" type="video/mp4" />
+          <source src="/background-loc-compressed.mp4" type="video/mp4" />
         </video>
         {/* Overlay preto com opacidade reduzida */}
         <div className="absolute inset-0 bg-black/60" />
