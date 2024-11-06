@@ -21,10 +21,18 @@ import {
   FaUmbrellaBeach,
   FaGamepad,
   FaTableTennisPaddleBall,
-  FaChess
+  FaChess,
+  FaHotel,
+  FaKitchen,
+  FaHouseChimney,
+  FaChair,
+  FaLaptop,
+  FaTree,
+  FaDiceD6
 } from 'react-icons/fa6';
-import { MdKitchen, MdLocalDining } from 'react-icons/md';
-import { IoBed } from 'react-icons/io5';
+import { MdKitchen, MdLocalDining, MdKingBed, MdOutlineKitchen, MdMeetingRoom, MdPool } from 'react-icons/md';
+import { IoBed, IoGameController, IoBarbellSharp } from 'react-icons/io5';
+import { BiSolidBed } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import { IconType } from 'react-icons';
 
@@ -418,13 +426,20 @@ export default function Accommodations() {
                       </div>
                     ) : (
                       <div className="w-[250px] h-[250px] flex items-center justify-center">
-                        {acc.id.includes('bedroom') && <FaBed className="w-40 h-40 text-gray-600" />}
-                        {acc.id === 'living-room' && <FaCouch className="w-40 h-40 text-gray-600" />}
-                        {acc.id === 'living-area' && <MdKitchen className="w-40 h-40 text-gray-600" />}
-                        {acc.id === 'kitchen' && <MdLocalDining className="w-40 h-40 text-gray-600" />}
-                        {acc.id === 'dining-room' && <FaHouse className="w-40 h-40 text-gray-600" />}
-                        {acc.id === 'home-office' && <FaWifi className="w-40 h-40 text-gray-600" />}
-                        {acc.id === 'backyard' && <FaUmbrellaBeach className="w-40 h-40 text-gray-600" />}
+                        {/* Quartos com ícones diferentes */}
+                        {acc.id === 'bedroom' && <MdKingBed className="w-40 h-40 text-gray-600" />} {/* Suíte Master */}
+                        {acc.id === 'bedroom-1' && <FaBed className="w-40 h-40 text-gray-600" />} {/* Quarto 1 */}
+                        {acc.id === 'bedroom-2' && <BiSolidBed className="w-40 h-40 text-gray-600" />} {/* Quarto 2 */}
+                        {acc.id === 'bedroom-3' && <IoBedOutline className="w-40 h-40 text-gray-600" />} {/* Quarto 3 */}
+                        
+                        {/* Áreas comuns */}
+                        {acc.id === 'living-room' && <FaHouseChimney className="w-40 h-40 text-gray-600" />} {/* Sala de Estar */}
+                        {acc.id === 'living-area' && <MdPool className="w-40 h-40 text-gray-600" />} {/* Área de Convivência */}
+                        {acc.id === 'kitchen' && <MdOutlineKitchen className="w-40 h-40 text-gray-600" />} {/* Cozinha */}
+                        {acc.id === 'dining-room' && <FaChair className="w-40 h-40 text-gray-600" />} {/* Sala de Jantar */}
+                        {acc.id === 'home-office' && <FaLaptop className="w-40 h-40 text-gray-600" />} {/* Home Office */}
+                        {acc.id === 'backyard' && <FaTree className="w-40 h-40 text-gray-600" />} {/* Quintal */}
+                        {acc.id === 'leisure' && <IoGameController className="w-40 h-40 text-gray-600" />} {/* Área de Lazer */}
                       </div>
                     )}
                   </div>
