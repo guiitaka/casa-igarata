@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import { BaseProps } from '@/types/global';
 
 interface HeaderProps extends BaseProps {}
@@ -30,7 +29,7 @@ export default function Header({}: HeaderProps) {
           {/* Logo */}
           <a 
             href="#"
-            className="text-3xl font-light tracking-wide text-white"
+            className="text-7xl font-extralight leading-none tracking-tight text-white"
           >
             Chácara Azul
           </a>
@@ -39,25 +38,25 @@ export default function Header({}: HeaderProps) {
           <nav className="flex items-center space-x-12">
             <a 
               href="#features"
-              className="text-lg font-light text-white/80 hover:text-white transition-colors"
+              className="text-2xl font-extralight tracking-wide text-white/80 hover:text-white transition-colors duration-300"
             >
               Comodidades
             </a>
             <a 
               href="#gallery"
-              className="text-lg font-light text-white/80 hover:text-white transition-colors"
+              className="text-2xl font-extralight tracking-wide text-white/80 hover:text-white transition-colors duration-300"
             >
               Galeria
             </a>
             <a 
               href="#location"
-              className="text-lg font-light text-white/80 hover:text-white transition-colors"
+              className="text-2xl font-extralight tracking-wide text-white/80 hover:text-white transition-colors duration-300"
             >
               Localização
             </a>
             <a 
               href="#contact"
-              className="text-lg font-light text-white/80 hover:text-white transition-colors"
+              className="text-2xl font-extralight tracking-wide text-white/80 hover:text-white transition-colors duration-300"
             >
               Contato
             </a>
@@ -65,7 +64,11 @@ export default function Header({}: HeaderProps) {
             {/* Botão Reserve Agora */}
             <a 
               href="#contact" 
-              className="text-lg font-light text-white hover:text-white/70 transition-colors"
+              className="text-2xl font-extralight tracking-wide text-white 
+                       transition-all duration-300 
+                       hover:text-white 
+                       hover:scale-105
+                       hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]"
             >
               Reserve Agora
             </a>
