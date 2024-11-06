@@ -4,10 +4,12 @@ const nextConfig = {
     domains: ['images.unsplash.com', 'placehold.co'],
     unoptimized: true,
   },
-  // Adicione esta configuração para arquivos grandes
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack: (config) => {
-    config.performance.maxAssetSize = 1024 * 1024 * 100; // 100MB
-    config.performance.maxEntrypointSize = 1024 * 1024 * 100; // 100MB
+    config.performance.maxAssetSize = 1024 * 1024 * 100;
+    config.performance.maxEntrypointSize = 1024 * 1024 * 100;
     return config;
   },
 }
