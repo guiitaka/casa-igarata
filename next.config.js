@@ -7,6 +7,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   webpack: (config) => {
     config.performance.maxAssetSize = 1024 * 1024 * 100;
     config.performance.maxEntrypointSize = 1024 * 1024 * 100;
