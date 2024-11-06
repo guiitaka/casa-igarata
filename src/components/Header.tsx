@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
+import { BaseProps } from '@/types'; // Importando BaseProps para resolver o erro
 
 interface HeaderProps extends BaseProps {}
 
@@ -9,7 +10,6 @@ export default function Header({}: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
 
-  // Efeito para detectar scroll
   useEffect(() => {
     const updateScrollPosition = () => {
       setIsScrolled(window.scrollY > 100);
@@ -21,16 +21,16 @@ export default function Header({}: HeaderProps) {
 
   return (
     <motion.header 
-      className={`fixed w-full z-50 transition-all duration-500 ${
+      className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'py-4 bg-black/80 backdrop-blur-sm' 
-          : 'py-8 bg-transparent'
+          ? 'mt-4 bg-black/80 backdrop-blur-sm' 
+          : 'mt-8'
       }`}
       initial={{ y: 0 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="container mx-auto px-4">
+      <div className="px-8 py-4 rounded-full border border-white/10 bg-black/20">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a 
@@ -84,7 +84,7 @@ export default function Header({}: HeaderProps) {
             <a
               href="#contact"
               className="px-6 py-2 bg-transparent border border-white/20
-                       text-lg font-light text-white
+                       text-lg font-light text-white rounded-full
                        transition-all duration-300
                        hover:bg-white/10"
             >
