@@ -406,7 +406,7 @@ export default function Accommodations() {
                 >
                   {/* Conteúdo do card */}
                   <div className="relative w-full h-full flex items-center justify-center">
-                    {acc.icon.startsWith('/') ? (
+                    {acc.icon && acc.icon.startsWith('/') ? (
                       <div className="relative w-[250px] h-[250px]">
                         <Image
                           src={acc.icon}
@@ -418,9 +418,7 @@ export default function Accommodations() {
                       </div>
                     ) : (
                       <div className="w-[250px] h-[250px] flex items-center justify-center">
-                        {acc.id === 'bedroom-1' && <FaBed className="w-40 h-40 text-gray-600" />}
-                        {acc.id === 'bedroom-2' && <FaBed className="w-40 h-40 text-gray-600" />}
-                        {acc.id === 'bedroom-4' && <FaBed className="w-40 h-40 text-gray-600" />}
+                        {acc.id.includes('bedroom') && <FaBed className="w-40 h-40 text-gray-600" />}
                         {acc.id === 'living-room' && <FaCouch className="w-40 h-40 text-gray-600" />}
                         {acc.id === 'living-area' && <MdKitchen className="w-40 h-40 text-gray-600" />}
                         {acc.id === 'kitchen' && <MdLocalDining className="w-40 h-40 text-gray-600" />}
