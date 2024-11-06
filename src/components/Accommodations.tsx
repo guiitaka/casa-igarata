@@ -53,7 +53,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/suite-master3.jpeg',
       '/images/casa/suite-master4.jpeg',
     ],
-    icon: '/icons/SuiteMaster.png',
+    icon: '/images/icons/cama-icone.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal king size' },
       { icon: FaShirt, text: 'Cabides' },
@@ -73,7 +73,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/quarto1-2.jpeg',
       '/images/casa/quarto1-3.jpeg',
     ],
-    icon: '/icons/Quarto1.png',
+    icon: '/images/icons/Quarto1.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal confortável' },
       { icon: FaShirt, text: 'Guarda-roupa' },
@@ -91,7 +91,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/quarto2-2.jpeg',
       '/images/casa/quarto2-3.jpeg',
     ],
-    icon: '/icons/Quarto2.png',
+    icon: '/images/icons/Quarto2.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal confortável' },
       { icon: FaShirt, text: 'Guarda-roupa' },
@@ -109,7 +109,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/quarto4-2.jpeg',
       '/images/casa/quarto4-3.jpeg',
     ],
-    icon: '/icons/Quarto4.png',
+    icon: '/images/icons/Quarto4.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal confortável' },
       { icon: FaShirt, text: 'Guarda-roupa' },
@@ -130,7 +130,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/sala5.jpeg',
       '/images/casa/sala6.jpeg',
     ],
-    icon: '/icons/SalaEstar.png',
+    icon: '/images/icons/sala-icone.png',
     amenities: [
       { icon: FaCouch, text: 'Sofá confortável' },
       { icon: FaTv, text: 'Smart TV 55"' },
@@ -149,7 +149,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/fachada.jpeg',
       '/images/casa/hero.jpeg',
     ],
-    icon: '/icons/AreaConvivencia.png',
+    icon: '/images/icons/AreaConvivencia.png',
     amenities: [
       { icon: FaPersonSwimming, text: 'Piscina privativa' },
       { icon: MdKitchen, text: 'Churrasqueira' },
@@ -168,7 +168,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/cozinha1-4.jpeg',
       '/images/casa/cozinha1-5.jpeg',
     ],
-    icon: '/icons/Cozinha.png',
+    icon: '/images/icons/Cozinha.png',
     amenities: [
       { icon: MdKitchen, text: 'Cozinha completa' },
       { icon: FaUtensils, text: 'Utensílios de cozinha' },
@@ -191,7 +191,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/sala-jantar-1-7.jpeg',
       '/images/casa/sala-jantar-1-8.jpeg',
     ],
-    icon: '/icons/SalaJantar.png',
+    icon: '/images/icons/SalaJantar.png',
     amenities: [
       { icon: MdLocalDining, text: 'Mesa de jantar para 8 pessoas' },
       { icon: FaUtensils, text: 'Conjunto completo de talheres' },
@@ -210,7 +210,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/homeoffice-1-3.jpeg',
       '/images/casa/homeoffice-1-4.jpeg',
     ],
-    icon: '/icons/HomeOffice.png',
+    icon: '/images/icons/HomeOffice.png',
     amenities: [
       { icon: FaWifi, text: 'Internet de alta velocidade' },
       { icon: FaCouch, text: 'Mesa de trabalho confortável' },
@@ -236,7 +236,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/quintal-1-10.jpeg',
       '/images/casa/quintal-1-11.jpeg',
     ],
-    icon: '/icons/Quintal.png',
+    icon: '/images/icons/Quintal.png',
     amenities: [
       { icon: FaPersonSwimming, text: 'Piscina privativa' },
       { icon: FaUmbrellaBeach, text: 'Área de descanso' },
@@ -254,7 +254,7 @@ const accommodations: Accommodation[] = [
       '/images/casa/lazer1-2.jpeg',
       '/images/casa/lazer1-3.jpeg',
     ],
-    icon: '/icons/AreaLazer.png',
+    icon: '/images/icons/AreaLazer.png',
     amenities: [
       { icon: FaGamepad, text: 'Jogos de videogame' },
       { icon: FaTableTennisPaddleBall, text: 'Mesa de ping pong' },
