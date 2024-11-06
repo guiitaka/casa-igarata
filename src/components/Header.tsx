@@ -1,18 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { BaseProps } from '@/types/global';
 
 interface HeaderProps extends BaseProps {}
 
 export default function Header({}: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detecta o scroll da página
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 100); // Ajuste este valor para controlar quando o header fica fixo
+      setIsScrolled(scrollPosition > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -28,58 +28,47 @@ export default function Header({}: HeaderProps) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.a 
+          <a 
             href="#"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
             className="text-3xl font-light tracking-wide text-white"
           >
             Chácara Azul
-          </motion.a>
+          </a>
 
           {/* Menu de Navegação */}
           <nav className="flex items-center space-x-12">
-            <motion.a 
+            <a 
               href="#features"
-              className="text-2xl font-extralight tracking-wide text-white/80 
-                       hover:text-white transition-colors duration-300"
+              className="text-lg font-light text-white/80 hover:text-white transition-colors"
             >
               Comodidades
-            </motion.a>
-            <motion.a 
+            </a>
+            <a 
               href="#gallery"
-              className="text-2xl font-extralight tracking-wide text-white/80 
-                       hover:text-white transition-colors duration-300"
+              className="text-lg font-light text-white/80 hover:text-white transition-colors"
             >
               Galeria
-            </motion.a>
-            <motion.a 
+            </a>
+            <a 
               href="#location"
-              className="text-2xl font-extralight tracking-wide text-white/80 
-                       hover:text-white transition-colors duration-300"
+              className="text-lg font-light text-white/80 hover:text-white transition-colors"
             >
               Localização
-            </motion.a>
-            <motion.a 
+            </a>
+            <a 
               href="#contact"
-              className="text-2xl font-extralight tracking-wide text-white/80 
-                       hover:text-white transition-colors duration-300"
+              className="text-lg font-light text-white/80 hover:text-white transition-colors"
             >
               Contato
-            </motion.a>
+            </a>
 
             {/* Botão Reserve Agora */}
-            <motion.a 
+            <a 
               href="#contact" 
-              className="text-2xl font-extralight tracking-wide text-white 
-                       transition-all duration-300 
-                       hover:text-white 
-                       hover:scale-105
-                       hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]"
+              className="text-lg font-light text-white hover:text-white/70 transition-colors"
             >
               Reserve Agora
-            </motion.a>
+            </a>
           </nav>
         </div>
       </div>
