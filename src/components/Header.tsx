@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <div className="fixed w-full flex justify-center z-50">
       <motion.header 
-        className={`transition-all duration-500 ${
+        className={`transition-all duration-500 rounded-full ${
           isScrolled 
             ? 'mt-4 bg-black/80' 
             : 'mt-8 bg-white/20'
