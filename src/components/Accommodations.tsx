@@ -46,7 +46,6 @@ interface Accommodation {
   title: string;
   description: string;
   images: string[];
-  icon: string;
   amenities: Amenity[];
 }
 
@@ -61,7 +60,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/suite-master3.jpeg',
       '/images/casa/suite-master4.jpeg',
     ],
-    icon: '/images/icons/CamaIcone.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal king size' },
       { icon: FaShirt, text: 'Cabides' },
@@ -81,7 +79,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/quarto1-2.jpeg',
       '/images/casa/quarto1-3.jpeg',
     ],
-    icon: '/images/icons/Quarto1.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal confortável' },
       { icon: FaShirt, text: 'Guarda-roupa' },
@@ -99,7 +96,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/quarto2-2.jpeg',
       '/images/casa/quarto2-3.jpeg',
     ],
-    icon: '/images/icons/Quarto2.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal confortável' },
       { icon: FaShirt, text: 'Guarda-roupa' },
@@ -117,7 +113,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/quarto4-2.jpeg',
       '/images/casa/quarto4-3.jpeg',
     ],
-    icon: '/images/icons/Quarto3.png',
     amenities: [
       { icon: FaBed, text: 'Cama de casal confortável' },
       { icon: FaShirt, text: 'Guarda-roupa' },
@@ -138,7 +133,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/sala5.jpeg',
       '/images/casa/sala6.jpeg',
     ],
-    icon: '/images/icons/SalaIcone.png',
     amenities: [
       { icon: FaCouch, text: 'Sofá confortável' },
       { icon: FaTv, text: 'Smart TV 55"' },
@@ -157,7 +151,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/fachada.jpeg',
       '/images/casa/hero.jpeg',
     ],
-    icon: '/images/icons/AreaConvivencia.png',
     amenities: [
       { icon: FaPersonSwimming, text: 'Piscina privativa' },
       { icon: MdKitchen, text: 'Churrasqueira' },
@@ -176,7 +169,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/cozinha1-4.jpeg',
       '/images/casa/cozinha1-5.jpeg',
     ],
-    icon: '/images/icons/Cozinha.png',
     amenities: [
       { icon: MdKitchen, text: 'Cozinha completa' },
       { icon: FaUtensils, text: 'Utensílios de cozinha' },
@@ -199,7 +191,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/sala-jantar-1-7.jpeg',
       '/images/casa/sala-jantar-1-8.jpeg',
     ],
-    icon: '/images/icons/SalaJantar.png',
     amenities: [
       { icon: MdLocalDining, text: 'Mesa de jantar para 8 pessoas' },
       { icon: FaUtensils, text: 'Conjunto completo de talheres' },
@@ -218,7 +209,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/homeoffice-1-3.jpeg',
       '/images/casa/homeoffice-1-4.jpeg',
     ],
-    icon: '/images/icons/HomeOffice.png',
     amenities: [
       { icon: FaWifi, text: 'Internet de alta velocidade' },
       { icon: FaCouch, text: 'Mesa de trabalho confortável' },
@@ -244,7 +234,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/quintal-1-10.jpeg',
       '/images/casa/quintal-1-11.jpeg',
     ],
-    icon: '/images/icons/Quintal.png',
     amenities: [
       { icon: FaPersonSwimming, text: 'Piscina privativa' },
       { icon: FaUmbrellaBeach, text: 'Área de descanso' },
@@ -262,7 +251,6 @@ const accommodations: Accommodation[] = [
       '/images/casa/lazer1-2.jpeg',
       '/images/casa/lazer1-3.jpeg',
     ],
-    icon: '/images/icons/AreaLazer.png',
     amenities: [
       { icon: FaGamepad, text: 'Jogos de videogame' },
       { icon: FaTableTennisPaddleBall, text: 'Mesa de ping pong' },
@@ -414,34 +402,22 @@ export default function Accommodations() {
                 >
                   {/* Conteúdo do card */}
                   <div className="relative w-full h-full flex items-center justify-center">
-                    {acc.icon && acc.icon.startsWith('/') ? (
-                      <div className="relative w-[250px] h-[250px]">
-                        <Image
-                          src={acc.icon}
-                          alt={acc.title}
-                          fill
-                          className="object-contain"
-                          sizes="250px"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-[250px] h-[250px] flex items-center justify-center">
-                        {/* Quartos com ícones diferentes */}
-                        {acc.id === 'bedroom' && <MdKingBed className="w-40 h-40 text-gray-600" />} {/* Suíte Master */}
-                        {acc.id === 'bedroom-1' && <FaBed className="w-40 h-40 text-gray-600" />} {/* Quarto 1 */}
-                        {acc.id === 'bedroom-2' && <BiSolidBed className="w-40 h-40 text-gray-600" />} {/* Quarto 2 */}
-                        {acc.id === 'bedroom-3' && <IoBedOutline className="w-40 h-40 text-gray-600" />} {/* Quarto 3 */}
-                        
-                        {/* Áreas comuns */}
-                        {acc.id === 'living-room' && <FaHouseChimney className="w-40 h-40 text-gray-600" />} {/* Sala de Estar */}
-                        {acc.id === 'living-area' && <MdPool className="w-40 h-40 text-gray-600" />} {/* Área de Convivência */}
-                        {acc.id === 'kitchen' && <MdOutlineKitchen className="w-40 h-40 text-gray-600" />} {/* Cozinha */}
-                        {acc.id === 'dining-room' && <FaChair className="w-40 h-40 text-gray-600" />} {/* Sala de Jantar */}
-                        {acc.id === 'home-office' && <FaLaptop className="w-40 h-40 text-gray-600" />} {/* Home Office */}
-                        {acc.id === 'backyard' && <FaTree className="w-40 h-40 text-gray-600" />} {/* Quintal */}
-                        {acc.id === 'leisure' && <IoGameController className="w-40 h-40 text-gray-600" />} {/* Área de Lazer */}
-                      </div>
-                    )}
+                    <div className="w-[250px] h-[250px] flex items-center justify-center">
+                      {/* Quartos com ícones diferentes */}
+                      {acc.id === 'bedroom' && <MdKingBed className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'bedroom-1' && <FaBed className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'bedroom-2' && <BiSolidBed className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'bedroom-3' && <IoBed className="w-40 h-40 text-gray-600" />}
+                      
+                      {/* Áreas comuns */}
+                      {acc.id === 'living-room' && <FaHouseChimney className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'living-area' && <MdPool className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'kitchen' && <MdOutlineKitchen className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'dining-room' && <FaChair className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'home-office' && <FaLaptop className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'backyard' && <FaTree className="w-40 h-40 text-gray-600" />}
+                      {acc.id === 'leisure' && <IoGameController className="w-40 h-40 text-gray-600" />}
+                    </div>
                   </div>
                 </motion.div>
               ))}
