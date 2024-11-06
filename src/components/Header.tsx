@@ -1,16 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { BaseProps } from '@/types/global';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface HeaderProps extends BaseProps {}
 
 export default function Header({}: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Detecta o scroll da página
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 100); // Ajuste este valor para controlar quando o header fica fixo
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -18,56 +20,57 @@ export default function Header({}: HeaderProps) {
   }, []);
 
   return (
-    <header className="fixed w-full z-50 transition-all duration-300">
-      <div className="container mx-auto px-8 pt-8">
-        {/* Fundo único para toda a navegação */}
-        <div className={`rounded-full transition-all duration-300 ${
-          isScrolled ? 'bg-black/50' : 'bg-white/10'
-        } backdrop-blur-sm`}>
-          <nav className="flex justify-between items-center h-24 px-8">
-            {/* Logo com brilho mais intenso */}
-            <a 
-              href="#" 
-              className="text-4xl font-normal tracking-wider text-white 
-                       transition-all duration-300 
-                       hover:text-white 
-                       hover:scale-105
-                       hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]"
+    <header className={`fixed w-full z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'top-0 bg-black/80 backdrop-blur-sm py-4' 
+        : 'top-8 bg-transparent py-6'
+    }`}>
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <motion.a 
+            href="#"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-light tracking-wide text-white"
+          >
+            Chácara Azul
+          </motion.a>
+
+          {/* Menu de Navegação */}
+          <nav className="flex items-center space-x-12">
+            <motion.a 
+              href="#features"
+              className="text-2xl font-extralight tracking-wide text-white/80 
+                       hover:text-white transition-colors duration-300"
             >
-              Casa Igaratá
-            </a>
+              Comodidades
+            </motion.a>
+            <motion.a 
+              href="#gallery"
+              className="text-2xl font-extralight tracking-wide text-white/80 
+                       hover:text-white transition-colors duration-300"
+            >
+              Galeria
+            </motion.a>
+            <motion.a 
+              href="#location"
+              className="text-2xl font-extralight tracking-wide text-white/80 
+                       hover:text-white transition-colors duration-300"
+            >
+              Localização
+            </motion.a>
+            <motion.a 
+              href="#contact"
+              className="text-2xl font-extralight tracking-wide text-white/80 
+                       hover:text-white transition-colors duration-300"
+            >
+              Contato
+            </motion.a>
 
-            {/* Menu Central com brilho mais intenso */}
-            <div className="flex items-center">
-              {['Comodidades', 'Galeria', 'Localização', 'Contato'].map((item, index) => (
-                <a 
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-2xl font-extralight tracking-wide text-white px-6 py-1 
-                           transition-all duration-300 
-                           hover:text-white 
-                           hover:scale-110 
-                           hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.9)]
-                           relative
-                           after:content-['']
-                           after:absolute
-                           after:bottom-0
-                           after:left-1/2
-                           after:-translate-x-1/2
-                           after:w-0
-                           after:h-[1px]
-                           after:bg-white
-                           after:transition-all
-                           after:duration-300
-                           hover:after:w-1/2"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-
-            {/* Botão Reserve Agora com brilho mais intenso */}
-            <a 
+            {/* Botão Reserve Agora */}
+            <motion.a 
               href="#contact" 
               className="text-2xl font-extralight tracking-wide text-white 
                        transition-all duration-300 
@@ -76,7 +79,7 @@ export default function Header({}: HeaderProps) {
                        hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]"
             >
               Reserve Agora
-            </a>
+            </motion.a>
           </nav>
         </div>
       </div>
