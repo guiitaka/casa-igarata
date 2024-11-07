@@ -74,8 +74,8 @@ export default function Testimonials({}: TestimonialsProps) {
             <Image
               src="/images/review-left.png"
               alt="Decoração"
-              width={80}
-              height={80}
+              width={120}
+              height={120}
               className="object-contain"
             />
             <div className="text-center">
@@ -89,8 +89,8 @@ export default function Testimonials({}: TestimonialsProps) {
             <Image
               src="/images/review-right.png"
               alt="Decoração"
-              width={80}
-              height={80}
+              width={120}
+              height={120}
               className="object-contain"
             />
           </div>
