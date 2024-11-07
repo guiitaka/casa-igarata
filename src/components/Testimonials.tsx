@@ -5,7 +5,7 @@ import { FaStar, FaSprayCan, FaCheck, FaKey, FaComments, FaMapMarkerAlt, FaTag, 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 interface TestimonialsProps extends BaseProps {}
@@ -435,7 +435,8 @@ export default function Testimonials({}: TestimonialsProps) {
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
   };
 
-  const renderStars = (rating: number, animate = false) => {
+  // Otimização 1: Memoizar a função de renderização das estrelas
+  const renderStars = useCallback((rating: number, animate = false) => {
     return Array.from({ length: 5 }).map((_, index) => (
       <motion.div
         key={index}
@@ -450,18 +451,44 @@ export default function Testimonials({}: TestimonialsProps) {
         />
       </motion.div>
     ));
-  };
+  }, [isInView]);
 
   const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
 
-  // Função para lidar com o clique no depoimento
-  const handleTestimonialClick = (testimonial: Testimonial) => {
+  // Otimização 2: Memoizar handlers
+  const handleTestimonialClick = useCallback((testimonial: Testimonial) => {
     setSelectedTestimonial(testimonial);
-  };
+  }, []);
 
-  // Função para fechar o depoimento expandido
-  const handleClose = () => {
+  const handleClose = useCallback((e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     setSelectedTestimonial(null);
+  }, []);
+
+  // Otimização 3: Reduzir complexidade das animações
+  const modalVariants = {
+    hidden: { 
+      opacity: 0,
+      scale: 0.5,
+      rotateY: 180
+    },
+    visible: { 
+      opacity: 1,
+      scale: 1,
+      rotateY: 360,
+      transition: {
+        duration: 0.6, // Reduzido de 0.8
+        type: "tween", // Mudado de "spring" para "tween"
+      }
+    },
+    exit: { 
+      opacity: 0,
+      scale: 0.5,
+      rotateY: 180,
+      transition: {
+        duration: 0.3 // Adicionado duration específico para saída
+      }
+    }
   };
 
   return (
@@ -673,10 +700,9 @@ export default function Testimonials({}: TestimonialsProps) {
       </div>
 
       {/* Modal do depoimento expandido */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {selectedTestimonial && (
           <>
-            {/* Overlay com blur */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -684,40 +710,25 @@ export default function Testimonials({}: TestimonialsProps) {
               onClick={handleClose}
               className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center"
             >
-              {/* Card expandido */}
               <motion.div
-                initial={{ 
-                  opacity: 0,
-                  scale: 0.5,
-                  rotateY: 180
-                }}
-                animate={{ 
-                  opacity: 1,
-                  scale: 1,
-                  rotateY: 360,
-                  transition: {
-                    duration: 0.8,
-                    type: "spring",
-                    stiffness: 100
-                  }
-                }}
-                exit={{ 
-                  opacity: 0,
-                  scale: 0.5,
-                  rotateY: 180
-                }}
+                variants={modalVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
                 className="relative w-full max-w-2xl mx-4 bg-white/10 backdrop-blur-xl p-12 rounded-3xl
                          border border-white/20"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Botão fechar */}
-                <button
+                {/* Botão fechar otimizado */}
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={handleClose}
                   className="absolute top-4 right-4 text-white/60 hover:text-white
                          transition-colors text-2xl"
                 >
                   ×
-                </button>
+                </motion.button>
 
                 {/* Conteúdo do card expandido */}
                 <div className="flex items-center gap-6 mb-8">
