@@ -54,7 +54,10 @@ const metrics = [
 
 export default function Testimonials({}: TestimonialsProps) {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true });
+  const isInView = useInView(sectionRef, { 
+    once: true,
+    amount: 0.2
+  });
 
   const renderStars = (rating: number, animate = false) => {
     return Array.from({ length: 5 }).map((_, index) => (
