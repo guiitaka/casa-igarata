@@ -415,6 +415,13 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   return shuffled;
 };
 
+const MAX_COMMENT_LENGTH = 150; // Ajuste este valor conforme necessário
+
+const truncateText = (text: string, maxLength: number) => {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength).trim() + '...';
+};
+
 export default function Testimonials({}: TestimonialsProps) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { 
@@ -673,14 +680,24 @@ export default function Testimonials({}: TestimonialsProps) {
                     </span>
                   </div>
 
-                  <p className="text-white/80 font-light leading-relaxed mb-4">
-                    {testimonial.comment}
-                  </p>
+                  <div className="flex flex-col h-full">
+                    <p className="text-white/80 font-light leading-relaxed mb-4">
+                      {truncateText(testimonial.comment, MAX_COMMENT_LENGTH)}
+                    </p>
+                    
+                    {testimonial.comment.length > MAX_COMMENT_LENGTH && (
+                      <div className="mt-auto">
+                        <span className="text-white/60 text-sm hover:text-white/80 transition-colors cursor-pointer">
+                          Ver mais...
+                        </span>
+                      </div>
+                    )}
 
-                  <div className="flex justify-between items-center">
-                    <span className="text-white/40 text-sm">
-                      via {testimonial.platform}
-                    </span>
+                    <div className="flex justify-between items-center mt-4">
+                      <span className="text-white/40 text-sm">
+                        via {testimonial.platform}
+                      </span>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -716,7 +733,7 @@ export default function Testimonials({}: TestimonialsProps) {
                 animate="visible"
                 exit="exit"
                 className="relative w-full max-w-2xl mx-4 bg-white/10 backdrop-blur-xl p-12 rounded-3xl
-                         border border-white/20"
+                         border border-white/20 max-h-[90vh] overflow-y-auto"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Botão fechar otimizado */}
