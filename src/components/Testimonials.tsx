@@ -1,11 +1,11 @@
 'use client';
 
 import { BaseProps } from '@/types/global';
-import { FaStar, FaSprayCan, FaCheck, FaKey, FaComments, FaMapMarkerAlt, FaTag } from 'react-icons/fa';
+import { FaStar, FaSprayCan, FaCheck, FaKey, FaComments, FaMapMarkerAlt, FaTag, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 interface TestimonialsProps extends BaseProps {}
 
@@ -52,12 +52,25 @@ const metrics = [
   { label: 'Custo-benefício', value: 4.9, icon: FaTag },
 ];
 
+const ITEMS_PER_PAGE = 3;
+
 export default function Testimonials({}: TestimonialsProps) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { 
     once: true,
     amount: 0.2
   });
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = Math.ceil(testimonials.length / ITEMS_PER_PAGE);
+  
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
 
   const renderStars = (rating: number, animate = false) => {
     return Array.from({ length: 5 }).map((_, index) => (
@@ -190,56 +203,96 @@ export default function Testimonials({}: TestimonialsProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.2, delay: 0.4 + index * 0.3 }}
-              whileHover={{ scale: 1.02, y: -5, transition: { duration: 0.5 } }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl
-                       hover:border-white/20 transition-colors duration-500"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <motion.div 
-                  className="relative w-16 h-16 rounded-full overflow-hidden"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
+        <div className="relative max-w-7xl mx-auto">
+          <button
+            onClick={prevPage}
+            className="absolute left-[-60px] top-1/2 transform -translate-y-1/2
+                       text-white/60 hover:text-white transition-colors
+                       hidden md:block"
+          >
+            <FaChevronLeft className="w-10 h-10" />
+          </button>
+
+          <button
+            onClick={nextPage}
+            className="absolute right-[-60px] top-1/2 transform -translate-y-1/2
+                       text-white/60 hover:text-white transition-colors
+                       hidden md:block"
+          >
+            <FaChevronRight className="w-10 h-10" />
+          </button>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            initial={false}
+          >
+            {testimonials
+              .slice(
+                currentPage * ITEMS_PER_PAGE,
+                (currentPage + 1) * ITEMS_PER_PAGE
+              )
+              .map((testimonial, index) => (
+                <motion.div
+                  key={testimonial.id}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02, y: -5, transition: { duration: 0.5 } }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl
+                           hover:border-white/20 transition-colors duration-500"
                 >
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    fill
-                    className="object-cover"
-                  />
+                  <div className="flex items-center gap-4 mb-6">
+                    <motion.div 
+                      className="relative w-16 h-16 rounded-full overflow-hidden"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </motion.div>
+                    <div>
+                      <h3 className="text-white font-light text-lg">{testimonial.name}</h3>
+                      <p className="text-white/60 text-sm">{testimonial.time}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="flex gap-1">
+                      {renderStars(testimonial.rating, true)}
+                    </div>
+                    <span className="text-white/60 text-sm ml-2">
+                      {testimonial.date}
+                    </span>
+                  </div>
+
+                  <p className="text-white/80 font-light leading-relaxed mb-4">
+                    {testimonial.comment}
+                  </p>
+
+                  <div className="flex justify-between items-center">
+                    <span className="text-white/40 text-sm">
+                      via {testimonial.platform}
+                    </span>
+                  </div>
                 </motion.div>
-                <div>
-                  <h3 className="text-white font-light text-lg">{testimonial.name}</h3>
-                  <p className="text-white/60 text-sm">{testimonial.time}</p>
-                </div>
-              </div>
+              ))}
+          </motion.div>
 
-              <div className="flex items-center gap-2 mb-4">
-                <div className="flex gap-1">
-                  {renderStars(testimonial.rating, true)}
-                </div>
-                <span className="text-white/60 text-sm ml-2">
-                  {testimonial.date}
-                </span>
-              </div>
-
-              <p className="text-white/80 font-light leading-relaxed mb-4">
-                {testimonial.comment}
-              </p>
-
-              <div className="flex justify-between items-center">
-                <span className="text-white/40 text-sm">
-                  via {testimonial.platform}
-                </span>
-              </div>
-            </motion.div>
-          ))}
+          <div className="flex justify-center gap-2 mt-12">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentPage(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 
+                           ${currentPage === index ? 'w-8 bg-white' : 'bg-white/30'}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
