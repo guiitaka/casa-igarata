@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     comment: 'Lugar excepcional! A casa superou todas as expectativas. Ambiente espaçoso, limpo e muito bem cuidado. A vista para a represa é de tirar o fôlego.',
     platform: 'Airbnb',
-    image: '/images/testimonials/Alexandre.jpeg',
+    image: '/images/testimonials/Alexandre.jpg',
     time: '6 anos no Airbnb'
   },
   {
@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     comment: 'Experiência incrível! A área externa é um verdadeiro paraíso. Piscina impecável e área gourmet completa. Ideal para famílias.',
     platform: 'Airbnb',
-    image: '/images/testimonials/Alexandre2.jpeg',
+    image: '/images/testimonials/Alexandre2.jpg',
     time: '4 anos no Airbnb'
   },
   {
@@ -78,7 +78,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     comment: 'Casa espetacular! Todos os ambientes são muito aconchegantes. A cozinha é um sonho para quem gosta de cozinhar.',
     platform: 'Airbnb',
-    image: '/images/testimonials/Ana Paula.jpeg',
+    image: '/images/testimonials/Ana%20Paula.jpg',
     time: '3 anos no Airbnb'
   },
   {
