@@ -54,12 +54,12 @@ const testimonials: Testimonial[] = [
   {
     id: '4',
     name: 'Aline',
-    date: 'Outubro 2023',
+    date: 'junho de 2024',
     rating: 5,
-    comment: 'Simplesmente maravilhoso! Cada detalhe da casa foi pensado com muito carinho. A vista do nascer do sol é indescritível.',
+    comment: 'Estadia ótima! Alexandre muito gentil e atencioso durante toda a hospedagem! A família toda adorou a hospitalidade!',
     platform: 'Airbnb',
     image: '/images/testimonials/Aline.jpeg',
-    time: '2 anos no Airbnb'
+    time: '4 anos no Airbnb'
   },
   {
     id: '5',
@@ -134,12 +134,12 @@ const testimonials: Testimonial[] = [
   {
     id: '12',
     name: 'Edson',
-    date: 'Fevereiro 2023',
+    date: 'julho de 2024',
     rating: 5,
-    comment: 'Estrutura impecável! A casa tem tudo que precisamos e mais um pouco. A área da piscina é um espetáculo à parte.',
+    comment: 'A melhor experiência em família! Imaginem que antes mesmo da reserva, esse casal já impactou a nossa decisão quando tiramos as dúvidas da nossa família, e sentimos aquela energia boa de família e pessoas que se preocupam com todo detalhe, responsáveis e são eles Alexandre e Mary os Super Hosts da plataforma!! As imagens do local já encantavam antes de chegarmos. Foi de fato o local que escolhemos e que proporcionou a celebração do meu aniversário para se conectar com a natureza, um local seguro, calmo, um ambiente bem cuidado e cheio de detalhes, aconchegante, uma terapia para a nossa alma. Nadamos, brincamos, comemos, caminhamos até o meu irmão pescou :D, bons cochilos na rede. As recomendações foram incríveis, a melhor pizza da região devemos destacar que foi a do Daniel. Renovamos as nossas energias, criamos novas memórias e queremos voltar o mais breve!!! Gratidão Alexandre e Mary por disponibilizarem e compartilharem um local tão especial, vocês fazem um diferencial imensurável.',
     platform: 'Airbnb',
     image: '/images/testimonials/Edson.jpeg',
-    time: '4 anos no Airbnb'
+    time: '9 anos no Airbnb'
   },
   {
     id: '13',
@@ -304,12 +304,12 @@ const testimonials: Testimonial[] = [
   {
     id: '29',
     name: 'Nathalia',
-    date: 'Setembro 2021',
+    date: 'julho de 2024',
     rating: 5,
-    comment: 'Férias perfeitas! A casa é um sonho, super bem cuidada e com uma vista privilegiada da represa.',
+    comment: 'Muito completo limpo e organizado',
     platform: 'Airbnb',
     image: '/images/testimonials/Nathalia.jpeg',
-    time: '3 anos no Airbnb'
+    time: '4 anos no Airbnb'
   },
   {
     id: '30',
