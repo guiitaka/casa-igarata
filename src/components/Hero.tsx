@@ -50,15 +50,15 @@ export default function Hero({}: HeroProps) {
       >
         <h1 
           ref={textRef}
-          className="text-4xl md:text-7xl lg:text-[120px] font-extralight leading-none tracking-tight mb-8 md:mb-12 text-center"
+          className="text-[52px] lg:text-[120px] font-extralight leading-none tracking-tight mb-8 lg:mb-12 text-center"
         >
           Você merece isso
         </h1>
         
         <a 
           href="#features"
-          className="px-6 md:px-8 py-2.5 md:py-3 bg-white/10 backdrop-blur-sm rounded-full 
-                   text-lg md:text-2xl font-extralight tracking-wide text-white 
+          className="px-6 lg:px-8 py-3 bg-white/10 backdrop-blur-sm rounded-full 
+                   text-xl lg:text-2xl font-extralight tracking-wide text-white 
                    transition-colors duration-300 
                    hover:bg-white/20"
         >
