@@ -240,6 +240,156 @@ const testimonials: Testimonial[] = [
     platform: 'Airbnb',
     image: '/images/testimonials/Julia.jpeg',
     time: '4 anos no Airbnb'
+  },
+  {
+    id: '23',
+    name: 'Karine',
+    date: 'Março 2022',
+    rating: 5,
+    comment: 'Lugar mágico! A casa é um refúgio perfeito. A vista do nascer e pôr do sol na represa é indescritível.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Karine.jpeg',
+    time: '3 anos no Airbnb'
+  },
+  {
+    id: '24',
+    name: 'Leandra',
+    date: 'Fevereiro 2022',
+    rating: 5,
+    comment: 'Experiência incrível! A casa é ainda mais bonita pessoalmente. Cada detalhe foi pensado com muito carinho.',
+    platform: 'Booking',
+    image: '/images/testimonials/Leandra.jpeg',
+    time: '4 anos no Booking'
+  },
+  {
+    id: '25',
+    name: 'Luciene',
+    date: 'Janeiro 2022',
+    rating: 5,
+    comment: 'Tudo perfeito! A casa é maravilhosa, super bem equipada e confortável. A área externa é um espetáculo.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Luciene.jpeg',
+    time: '2 anos no Airbnb'
+  },
+  {
+    id: '26',
+    name: 'Marcio',
+    date: 'Dezembro 2021',
+    rating: 5,
+    comment: 'Simplesmente sensacional! Estrutura completa, ambiente acolhedor e vista deslumbrante da represa.',
+    platform: 'Booking',
+    image: '/images/testimonials/Marcio.jpeg',
+    time: '3 anos no Booking'
+  },
+  {
+    id: '27',
+    name: 'Merli',
+    date: 'Novembro 2021',
+    rating: 5,
+    comment: 'Casa espetacular! Passamos momentos incríveis em família. A área gourmet é um show à parte.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Merli.jpeg',
+    time: '4 anos no Airbnb'
+  },
+  {
+    id: '28',
+    name: 'Milena',
+    date: 'Outubro 2021',
+    rating: 5,
+    comment: 'Lugar incrível! A casa é muito espaçosa e aconchegante. A piscina tem uma vista maravilhosa.',
+    platform: 'Booking',
+    image: '/images/testimonials/Milena.jpeg',
+    time: '2 anos no Booking'
+  },
+  {
+    id: '29',
+    name: 'Nathalia',
+    date: 'Setembro 2021',
+    rating: 5,
+    comment: 'Férias perfeitas! A casa é um sonho, super bem cuidada e com uma vista privilegiada da represa.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Nathalia.jpeg',
+    time: '3 anos no Airbnb'
+  },
+  {
+    id: '30',
+    name: 'Patricia',
+    date: 'Agosto 2021',
+    rating: 5,
+    comment: 'Excelente estadia! Tudo muito limpo e organizado. Os anfitriões são super atenciosos.',
+    platform: 'Booking',
+    image: '/images/testimonials/Patricia.jpeg',
+    time: '4 anos no Booking'
+  },
+  {
+    id: '31',
+    name: 'Patricia2',
+    date: 'Julho 2021',
+    rating: 5,
+    comment: 'Casa maravilhosa! Ambiente familiar e acolhedor. A área de lazer é completa e muito bem planejada.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Patricia2.jpeg',
+    time: '3 anos no Airbnb'
+  },
+  {
+    id: '32',
+    name: 'Rafael',
+    date: 'Junho 2021',
+    rating: 5,
+    comment: 'Lugar extraordinário! A casa superou todas as expectativas. Condomínio seguro e localização privilegiada.',
+    platform: 'Booking',
+    image: '/images/testimonials/Rafael.jpeg',
+    time: '2 anos no Booking'
+  },
+  {
+    id: '33',
+    name: 'Rodolfo',
+    date: 'Maio 2021',
+    rating: 5,
+    comment: 'Experiência única! A casa é perfeita em todos os aspectos. A vista para a represa é deslumbrante.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Rodolfo.jpeg',
+    time: '4 anos no Airbnb'
+  },
+  {
+    id: '34',
+    name: 'Rose',
+    date: 'Abril 2021',
+    rating: 5,
+    comment: 'Tudo impecável! Desde a recepção até o checkout. A casa é linda e muito bem equipada.',
+    platform: 'Booking',
+    image: '/images/testimonials/Rose.jpeg',
+    time: '3 anos no Booking'
+  },
+  {
+    id: '35',
+    name: 'Roseli',
+    date: 'Março 2021',
+    rating: 5,
+    comment: 'Casa espetacular! Ambiente perfeito para relaxar com a família. A área externa é um verdadeiro paraíso.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Roseli.jpeg',
+    time: '2 anos no Airbnb'
+  },
+  {
+    id: '36',
+    name: 'Suzane',
+    date: 'Fevereiro 2021',
+    rating: 5,
+    comment: 'Lugar incrível! A casa é ainda mais bonita ao vivo. Cada detalhe foi pensado com muito carinho.',
+    platform: 'Booking',
+    image: '/images/testimonials/Suzane.jpeg',
+    time: '4 anos no Booking'
+  },
+  {
+    id: '37',
+    name: 'Thamiris',
+    date: 'Janeiro 2021',
+    rating: 5,
+    comment: 'Férias memoráveis! A casa é um verdadeiro refúgio. Estrutura completa e vista deslumbrante.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Thamiris.jpeg',
+    time: '3 anos no Airbnb'
   }
 ];
 
