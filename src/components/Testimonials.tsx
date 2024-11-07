@@ -3,6 +3,9 @@
 import { BaseProps } from '@/types/global';
 import { FaStar, FaSprayCan, FaCheck, FaKey, FaComments, FaMapMarkerAlt, FaTag } from 'react-icons/fa';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 interface TestimonialsProps extends BaseProps {}
 
@@ -50,77 +53,164 @@ const metrics = [
 ];
 
 export default function Testimonials({}: TestimonialsProps) {
-  const renderStars = (rating: number) => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
+
+  const renderStars = (rating: number, animate = false) => {
     return Array.from({ length: 5 }).map((_, index) => (
-      <FaStar
+      <motion.div
         key={index}
-        className={`w-4 h-4 ${
-          index < rating ? 'text-yellow-400' : 'text-gray-300'
-        }`}
-      />
+        initial={animate ? { opacity: 0, scale: 0 } : {}}
+        animate={animate && isInView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ delay: index * 0.1 }}
+      >
+        <FaStar
+          className={`w-4 h-4 ${
+            index < rating ? 'text-yellow-400' : 'text-gray-300'
+          }`}
+        />
+      </motion.div>
     ));
   };
 
   return (
-    <section className="py-32 bg-black" id="testimonials">
+    <section className="py-32 bg-black overflow-hidden" id="testimonials" ref={sectionRef}>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-light text-center text-white mb-4">Avaliações</h2>
-        <p className="text-white/60 text-center font-light mb-24 max-w-2xl mx-auto">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-light text-center text-white mb-4"
+        >
+          Avaliações
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-white/60 text-center font-light mb-24 max-w-2xl mx-auto"
+        >
           O que nossos hóspedes dizem sobre sua experiência
-        </p>
+        </motion.p>
 
         <div className="max-w-4xl mx-auto mb-24">
           <div className="flex items-center justify-center mb-12">
             <div className="text-center">
               <div className="flex items-center justify-center gap-1 mb-4">
-                <FaStar className="w-10 h-10 text-yellow-400" />
-                <h3 className="text-7xl font-light text-white">5</h3>
-                <span className="text-7xl font-light text-white">,</span>
-                <h3 className="text-7xl font-light text-white">0</h3>
-                <FaStar className="w-10 h-10 text-yellow-400" />
+                <motion.div
+                  initial={{ rotate: -180, opacity: 0 }}
+                  animate={isInView ? { rotate: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.6 }}
+                >
+                  <FaStar className="w-10 h-10 text-yellow-400" />
+                </motion.div>
+                <motion.div className="flex items-center">
+                  <motion.h3 
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="text-7xl font-light text-white"
+                  >
+                    5
+                  </motion.h3>
+                  <motion.span 
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="text-7xl font-light text-white"
+                  >
+                    ,
+                  </motion.span>
+                  <motion.h3 
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="text-7xl font-light text-white"
+                  >
+                    0
+                  </motion.h3>
+                </motion.div>
+                <motion.div
+                  initial={{ rotate: 180, opacity: 0 }}
+                  animate={isInView ? { rotate: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.6 }}
+                >
+                  <FaStar className="w-10 h-10 text-yellow-400" />
+                </motion.div>
               </div>
-              <p className="text-xl font-light text-white mb-2">Preferido dos hóspedes</p>
-              <p className="text-sm text-white/60 max-w-md">
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="text-xl font-light text-white mb-2"
+              >
+                Preferido dos hóspedes
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className="text-sm text-white/60 max-w-md"
+              >
                 Esta acomodação está no <span className="font-medium">top 10%</span> dos 
                 anúncios elegíveis, baseado em avaliações, comentários e confiabilidade
-              </p>
+              </motion.p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-            {metrics.map((metric) => (
-              <div key={metric.label} className="flex items-center gap-4">
-                <metric.icon className="w-6 h-6 text-white/30" />
+            {metrics.map((metric, index) => (
+              <motion.div
+                key={metric.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-center gap-4"
+              >
+                <motion.div
+                  animate={{ rotate: [0, 5, -5, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                >
+                  <metric.icon className="w-6 h-6 text-white/30" />
+                </motion.div>
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-2xl font-light text-white">{metric.value}</span>
                     <div className="flex gap-1">
-                      {renderStars(5)}
+                      {renderStars(5, true)}
                     </div>
                   </div>
                   <p className="text-sm text-white/60">{metric.label}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial) => (
-            <div
+          {testimonials.map((testimonial, index) => (
+            <motion.div
               key={testimonial.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ scale: 1.02, y: -5 }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl
                        hover:border-white/20 transition-colors duration-500"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                <motion.div 
+                  className="relative w-16 h-16 rounded-full overflow-hidden"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     fill
                     className="object-cover"
                   />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="text-white font-light text-lg">{testimonial.name}</h3>
                   <p className="text-white/60 text-sm">{testimonial.time}</p>
@@ -129,7 +219,7 @@ export default function Testimonials({}: TestimonialsProps) {
 
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex gap-1">
-                  {renderStars(testimonial.rating)}
+                  {renderStars(testimonial.rating, true)}
                 </div>
                 <span className="text-white/60 text-sm ml-2">
                   {testimonial.date}
@@ -145,7 +235,7 @@ export default function Testimonials({}: TestimonialsProps) {
                   via {testimonial.platform}
                 </span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
