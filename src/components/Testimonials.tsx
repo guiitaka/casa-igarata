@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 interface TestimonialsProps extends BaseProps {}
 
@@ -451,8 +452,20 @@ export default function Testimonials({}: TestimonialsProps) {
     ));
   };
 
+  const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
+
+  // Função para lidar com o clique no depoimento
+  const handleTestimonialClick = (testimonial: Testimonial) => {
+    setSelectedTestimonial(testimonial);
+  };
+
+  // Função para fechar o depoimento expandido
+  const handleClose = () => {
+    setSelectedTestimonial(null);
+  };
+
   return (
-    <section className="py-32 bg-black overflow-hidden" id="testimonials" ref={sectionRef}>
+    <section className="py-32 bg-black overflow-hidden relative" id="testimonials" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -601,8 +614,9 @@ export default function Testimonials({}: TestimonialsProps) {
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02, y: -5, transition: { duration: 0.5 } }}
+                  onClick={() => handleTestimonialClick(testimonial)}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl
-                           hover:border-white/20 transition-colors duration-500"
+                           hover:border-white/20 transition-colors duration-500 cursor-pointer"
                 >
                   <div className="flex items-center gap-4 mb-6">
                     <motion.div 
@@ -657,6 +671,98 @@ export default function Testimonials({}: TestimonialsProps) {
           </div>
         </div>
       </div>
+
+      {/* Modal do depoimento expandido */}
+      <AnimatePresence>
+        {selectedTestimonial && (
+          <>
+            {/* Overlay com blur */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={handleClose}
+              className="fixed inset-0 bg-black/80 backdrop-blur-md z-50"
+            />
+
+            {/* Card expandido */}
+            <motion.div
+              initial={{ 
+                opacity: 0,
+                scale: 0.5,
+                rotateY: 180
+              }}
+              animate={{ 
+                opacity: 1,
+                scale: 1,
+                rotateY: 360,
+                transition: {
+                  duration: 0.8,
+                  type: "spring",
+                  stiffness: 100
+                }
+              }}
+              exit={{ 
+                opacity: 0,
+                scale: 0.5,
+                rotateY: 180
+              }}
+              className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+                         w-full max-w-2xl bg-white/10 backdrop-blur-xl p-12 rounded-3xl z-50
+                         border border-white/20"
+            >
+              {/* Botão fechar */}
+              <button
+                onClick={handleClose}
+                className="absolute top-4 right-4 text-white/60 hover:text-white
+                         transition-colors text-2xl"
+              >
+                ×
+              </button>
+
+              {/* Conteúdo do card expandido */}
+              <div className="flex items-center gap-6 mb-8">
+                <motion.div 
+                  className="relative w-24 h-24 rounded-full overflow-hidden"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Image
+                    src={selectedTestimonial.image}
+                    alt={selectedTestimonial.name}
+                    fill
+                    className="object-cover"
+                  />
+                </motion.div>
+                <div>
+                  <h3 className="text-white font-light text-2xl mb-1">
+                    {selectedTestimonial.name}
+                  </h3>
+                  <p className="text-white/60 text-lg">{selectedTestimonial.time}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex gap-1">
+                  {renderStars(selectedTestimonial.rating, true)}
+                </div>
+                <span className="text-white/60 text-lg ml-2">
+                  {selectedTestimonial.date}
+                </span>
+              </div>
+
+              <p className="text-white/90 font-light leading-relaxed text-xl">
+                {selectedTestimonial.comment}
+              </p>
+
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <span className="text-white/40 text-lg">
+                  via {selectedTestimonial.platform}
+                </span>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   );
 } 
