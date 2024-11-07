@@ -1,7 +1,7 @@
 'use client';
 
 import { BaseProps } from '@/types/global';
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaSprayCan, FaCheck, FaKey, FaComments, FaMapMarkerAlt, FaTag } from 'react-icons/fa';
 import Image from 'next/image';
 
 interface TestimonialsProps extends BaseProps {}
@@ -40,6 +40,15 @@ const testimonials: Testimonial[] = [
   }
 ];
 
+const metrics = [
+  { label: 'Limpeza', value: 4.9, icon: FaSprayCan },
+  { label: 'Exatidão do anúncio', value: 5.0, icon: FaCheck },
+  { label: 'Check-in', value: 5.0, icon: FaKey },
+  { label: 'Comunicação', value: 5.0, icon: FaComments },
+  { label: 'Localização', value: 5.0, icon: FaMapMarkerAlt },
+  { label: 'Custo-benefício', value: 4.9, icon: FaTag },
+];
+
 export default function Testimonials({}: TestimonialsProps) {
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }).map((_, index) => (
@@ -59,6 +68,50 @@ export default function Testimonials({}: TestimonialsProps) {
         <p className="text-white/60 text-center font-light mb-24 max-w-2xl mx-auto">
           O que nossos hóspedes dizem sobre sua experiência
         </p>
+
+        <div className="max-w-4xl mx-auto mb-24">
+          <div className="flex items-center justify-center gap-8 mb-12">
+            <Image
+              src="/images/review-left.png"
+              alt="Decoração"
+              width={80}
+              height={80}
+              className="object-contain"
+            />
+            <div className="text-center">
+              <h3 className="text-7xl font-light text-white mb-4">5,0</h3>
+              <p className="text-xl font-light text-white mb-2">Preferido dos hóspedes</p>
+              <p className="text-sm text-white/60 max-w-md">
+                Esta acomodação está no <span className="font-medium">top 10%</span> dos 
+                anúncios elegíveis, baseado em avaliações, comentários e confiabilidade
+              </p>
+            </div>
+            <Image
+              src="/images/review-right.png"
+              alt="Decoração"
+              width={80}
+              height={80}
+              className="object-contain"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            {metrics.map((metric) => (
+              <div key={metric.label} className="flex items-center gap-4">
+                <metric.icon className="w-6 h-6 text-white/30" />
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl font-light text-white">{metric.value}</span>
+                    <div className="flex gap-1">
+                      {renderStars(5)}
+                    </div>
+                  </div>
+                  <p className="text-sm text-white/60">{metric.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial) => (
