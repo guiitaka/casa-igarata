@@ -70,8 +70,8 @@ export default function Testimonials({}: TestimonialsProps) {
         </p>
 
         <div className="max-w-4xl mx-auto mb-24">
-          <div className="flex items-center justify-center gap-8 mb-12">
-            <FaStar className="w-24 h-24 text-yellow-400" />
+          <div className="flex items-center justify-center gap-2 mb-12">
+            <FaStar className="w-16 h-16 text-yellow-400" />
             <div className="text-center">
               <h3 className="text-7xl font-light text-white mb-4">5,0</h3>
               <p className="text-xl font-light text-white mb-2">Preferido dos hóspedes</p>
@@ -80,7 +80,7 @@ export default function Testimonials({}: TestimonialsProps) {
                 anúncios elegíveis, baseado em avaliações, comentários e confiabilidade
               </p>
             </div>
-            <FaStar className="w-24 h-24 text-yellow-400" />
+            <FaStar className="w-16 h-16 text-yellow-400" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
