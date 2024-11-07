@@ -70,17 +70,21 @@ export default function Testimonials({}: TestimonialsProps) {
         </p>
 
         <div className="max-w-4xl mx-auto mb-24">
-          <div className="flex items-center justify-center gap-2 mb-12">
-            <FaStar className="w-16 h-16 text-yellow-400" />
+          <div className="flex items-center justify-center mb-12">
             <div className="text-center">
-              <h3 className="text-7xl font-light text-white mb-4">5,0</h3>
+              <div className="flex items-center justify-center gap-1 mb-4">
+                <FaStar className="w-10 h-10 text-yellow-400" />
+                <h3 className="text-7xl font-light text-white">5</h3>
+                <span className="text-7xl font-light text-white">,</span>
+                <h3 className="text-7xl font-light text-white">0</h3>
+                <FaStar className="w-10 h-10 text-yellow-400" />
+              </div>
               <p className="text-xl font-light text-white mb-2">Preferido dos hóspedes</p>
               <p className="text-sm text-white/60 max-w-md">
                 Esta acomodação está no <span className="font-medium">top 10%</span> dos 
                 anúncios elegíveis, baseado em avaliações, comentários e confiabilidade
               </p>
             </div>
-            <FaStar className="w-16 h-16 text-yellow-400" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
