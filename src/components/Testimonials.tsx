@@ -71,19 +71,7 @@ export default function Testimonials({}: TestimonialsProps) {
 
         <div className="max-w-4xl mx-auto mb-24">
           <div className="flex items-center justify-center gap-8 mb-12">
-            <div className="relative w-[150px] h-[150px]">
-              <Image
-                src="/images/review-left.png"
-                alt="Decoração Esquerda"
-                fill
-                priority
-                className="object-contain"
-                onError={(e) => {
-                  console.error('Erro ao carregar imagem:', e);
-                  console.log('Tentando carregar:', '/images/review-left.png');
-                }}
-              />
-            </div>
+            <FaStar className="w-24 h-24 text-yellow-400" />
             <div className="text-center">
               <h3 className="text-7xl font-light text-white mb-4">5,0</h3>
               <p className="text-xl font-light text-white mb-2">Preferido dos hóspedes</p>
@@ -92,19 +80,7 @@ export default function Testimonials({}: TestimonialsProps) {
                 anúncios elegíveis, baseado em avaliações, comentários e confiabilidade
               </p>
             </div>
-            <div className="relative w-[150px] h-[150px]">
-              <Image
-                src="/images/review-right.png"
-                alt="Decoração Direita"
-                fill
-                priority
-                className="object-contain"
-                onError={(e) => {
-                  console.error('Erro ao carregar imagem:', e);
-                  console.log('Tentando carregar:', '/images/review-right.png');
-                }}
-              />
-            </div>
+            <FaStar className="w-24 h-24 text-yellow-400" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
