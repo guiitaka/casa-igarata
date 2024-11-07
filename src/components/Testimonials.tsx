@@ -24,22 +24,22 @@ const testimonials: Testimonial[] = [
   {
     id: '1',
     name: 'Alexandre',
-    date: 'Janeiro 2024',
+    date: 'outubro de 2023',
     rating: 5,
-    comment: 'Lugar excepcional! A casa superou todas as expectativas. Ambiente espaçoso, limpo e muito bem cuidado. A vista para a represa é de tirar o fôlego.',
+    comment: 'O Alexandre além de muito simpático, muito prestativo e acolhedor. A hospedagem estava dentro das expectativas. Super Recomendo.',
     platform: 'Airbnb',
     image: '/images/testimonials/Alexandre.jpeg',
-    time: '6 anos no Airbnb'
+    time: '2 anos no Airbnb'
   },
   {
     id: '2',
     name: 'Alexandre2',
-    date: 'Dezembro 2023',
+    date: 'julho de 2023',
     rating: 5,
-    comment: 'Experiência incrível! A área externa é um verdadeiro paraíso. Piscina impecável e área gourmet completa. Ideal para famílias.',
+    comment: 'Casa muito confortável, limpa e organizada, tem todos utensílios necessários para a estadia. Fica próximo de uma represa com uma paisagem sensacional, com uma vista linda de alguns quartos da casa. O anfitrião é muito solicito e gentil, adoramos nossa estadia!!',
     platform: 'Airbnb',
     image: '/images/testimonials/Alexandre2.jpeg',
-    time: '4 anos no Airbnb'
+    time: '3 anos no Airbnb'
   },
   {
     id: '3',
@@ -64,59 +64,59 @@ const testimonials: Testimonial[] = [
   {
     id: '5',
     name: 'Amanda',
-    date: 'Setembro 2023',
+    date: 'março de 2024',
     rating: 5,
-    comment: 'Um verdadeiro refúgio! Lugar perfeito para relaxar e recarregar as energias. A comunicação com os anfitriões foi excelente.',
-    platform: 'Booking',
+    comment: 'Excelente estadia! Anfitriões super fofos ainda deixaram chocolate para nós e um bilhete. Aproveitamos muitoo, casa em excelente estado com todos itens necessários inclusive cobertas e toalhas! Espero voltar mais vezes 🙏',
+    platform: 'Airbnb',
     image: '/images/testimonials/Amanda.jpeg',
-    time: '5 anos no Booking'
+    time: '4 anos no Airbnb'
   },
   {
     id: '6',
     name: 'Ana Paula',
-    date: 'Agosto 2023',
+    date: 'abril de 2024',
     rating: 5,
-    comment: 'Casa espetacular! Todos os ambientes são muito aconchegantes. A cozinha é um sonho para quem gosta de cozinhar.',
+    comment: 'A casa é muito boa! Tem uma natureza privilegiada, O terreno fica na beira da represa com uma mata privilegiada! O acesso a represa é bem íngreme, mas vale a pena descer, a vista é linda!',
     platform: 'Airbnb',
     image: '/images/testimonials/Ana%20Paula.jpeg',
-    time: '3 anos no Airbnb'
+    time: '8 anos no Airbnb'
   },
   {
     id: '7',
     name: 'Ana Silvia',
-    date: 'Julho 2023',
+    date: 'setembro de 2023',
     rating: 5,
-    comment: 'Fim de semana perfeito! A casa é linda e super bem equipada. O deck com vista para a represa é um diferencial incrível.',
-    platform: 'Booking',
+    comment: 'Lugar lindo! Casa ampla e com os ambientes conectados, tudo muito limpo e casa completa. O visual é maravilhoso! Espaço de churrasqueira e piscina muito gostoso. E os anfitriões são ótimos, respondem super rápido, nos deram dicas e tiraram todas as dúvidas! Realmente me senti em casa e com certeza voltaria!',
+    platform: 'Airbnb',
     image: '/images/testimonials/Ana Silvia.jpeg',
-    time: '4 anos no Booking'
+    time: '8 anos no Airbnb'
   },
   {
     id: '8',
-    name: 'Andre',
-    date: 'Junho 2023',
+    name: 'André',
+    date: 'abril de 2024',
     rating: 5,
-    comment: 'Lugar incrível! Passamos dias maravilhosos em família. A estrutura da casa é completa e muito confortável.',
+    comment: 'Foi um tempo muito agradável a estada no espaço do Tadashi. Muita praticidade na cozinha (utensílios), as instruções foram bastante claras, a casa é muito aconchegante, e a natureza ao redor é maravilhosa. Apenas um contratempo: nas chácaras vizinhas (ao lado e atr��s) houve raves - mas logo que avisado, o anfitrião acionou a segurança do condomínio, e foi resolvido.',
     platform: 'Airbnb',
     image: '/images/testimonials/Andre.jpeg',
-    time: '2 anos no Airbnb'
+    time: '12 anos no Airbnb'
   },
   {
     id: '9',
     name: 'Camilla',
-    date: 'Maio 2023',
+    date: 'dezembro de 2023',
     rating: 5,
-    comment: 'Experiência única! A casa é um verdadeiro paraíso. Tudo muito limpo e organizado. Voltaremos com certeza!',
-    platform: 'Booking',
+    comment: 'Meu final de semana foi maravilhoso, casa, espaço de laser, o condomínio, tudo estava perfeito. Voltarei mais vezes.',
+    platform: 'Airbnb',
     image: '/images/testimonials/Camilla.jpeg',
-    time: '3 anos no Booking'
+    time: '1 ano no Airbnb'
   },
   {
     id: '10',
     name: 'Cassio',
-    date: 'Abril 2023',
+    date: 'março de 2024',
     rating: 5,
-    comment: 'Férias inesquecíveis! A casa é maravilhosa e os anfitriões são muito atenciosos. Recomendo fortemente!',
+    comment: 'Casa ampla e confortável, pegamos final de semana chuvoso e a casa propiciou espaço para as crianças brincarem tranquilamente. Área do churrasco coberta. Lugar tranquilo com portaria e segurança. Alexandre ótimo anfitrião, flexível e super atencioso. Hoje ainda foi muito prestativo ao informar que esquecemos brinquedos do meu filho na casa. É uma casa super família tem tudo para o dia a dia. Nota 10 para os anfitriões. Que Deus os abençoe.',
     platform: 'Airbnb',
     image: '/images/testimonials/Cassio.jpeg',
     time: '4 anos no Airbnb'
@@ -124,12 +124,12 @@ const testimonials: Testimonial[] = [
   {
     id: '11',
     name: 'Danilo',
-    date: 'Março 2023',
+    date: 'outubro de 2023',
     rating: 5,
-    comment: 'Local excepcional! A casa é um verdadeiro refúgio. Perfeita para momentos em família e com amigos.',
-    platform: 'Booking',
+    comment: 'tudo maravilhoso e condizentes com as fotos e discrição do anúncio. Alexandre muito gentil e prestativo sempre atento com a hospedagem foi um ótimo FDS. ctz voltaremos novamente.',
+    platform: 'Airbnb',
     image: '/images/testimonials/Danilo.jpeg',
-    time: '3 anos no Booking'
+    time: '3 anos no Airbnb'
   },
   {
     id: '12',
@@ -144,32 +144,32 @@ const testimonials: Testimonial[] = [
   {
     id: '13',
     name: 'Efrem',
-    date: 'Janeiro 2023',
+    date: 'fevereiro de 2024',
     rating: 5,
-    comment: 'Excelente estadia! O espaço é ainda mais bonito pessoalmente. A vista para a represa é deslumbrante em qualquer horário.',
-    platform: 'Booking',
+    comment: 'Linda casa, muito aconchegante e fácil acesso. Tem todos os utensílios para você fazer o que tiver vontade. Tem jogos de tabuleiro para diversão. Anfitrião muito prestativo e deu várias dicas!',
+    platform: 'Airbnb',
     image: '/images/testimonials/Efrem.jpeg',
-    time: '2 anos no Booking'
+    time: '9 anos no Airbnb'
   },
   {
     id: '14',
     name: 'Fabio',
-    date: 'Dezembro 2022',
+    date: 'outubro de 2023',
     rating: 5,
-    comment: 'Casa maravilhosa! Cada ambiente foi pensado nos mínimos detalhes. A área gourmet é um show à parte.',
+    comment: 'Lugar excelente, ótimo pra descansar e apreciar uma paisagem lindíssima, anfitrião muito solícito e acessível. Tem uma pizza top próximo ao local que entrega rápido e bem quentinha, e o melhor de todos me senti em casa de verdade, ambiente muito apto com tudo e algo mais descrito. Nota 10',
     platform: 'Airbnb',
     image: '/images/testimonials/Fabio.jpeg',
-    time: '5 anos no Airbnb'
+    time: '1 ano no Airbnb'
   },
   {
     id: '15',
     name: 'Gabriela',
-    date: 'Novembro 2022',
+    date: 'agosto de 2023',
     rating: 5,
-    comment: 'Lugar incrível! Perfeito para relaxar com a família. A casa é super aconchegante e bem equipada.',
-    platform: 'Booking',
+    comment: 'Estadia maravilhosa. A casa é super espaçosa, estava tudo limpinho e organizado. O anfitrião foi super atencioso e deixou até uma caixa de bombom com recadinho para nós quando chegamos (detalhes que fazem a diferença). A casa é super equipada, tinha até sabonetes, papel higiênico etc... Voltaremos com certeza. Nota 1000',
+    platform: 'Airbnb',
     image: '/images/testimonials/Gabriela.jpeg',
-    time: '3 anos no Booking'
+    time: '6 anos no Airbnb'
   },
   {
     id: '16',
@@ -184,32 +184,32 @@ const testimonials: Testimonial[] = [
   {
     id: '17',
     name: 'Gustavo',
-    date: 'Setembro 2022',
+    date: 'abril de 2024',
     rating: 5,
-    comment: 'Simplesmente fantástico! A casa é muito espaçosa e confortável. A vista para a represa é de tirar o fôlego.',
-    platform: 'Booking',
+    comment: 'Fiquei impressionado com o sobrado, originalmente planejava apenas uma pernoite, porém gostei tanto que acabei estendendo minha estadia. O lugar é incrivelmente limpo e organizado, com roupas de cama, mesa e banho trocadas e lavadas. Além disso, possui ótima conexão à internet e uma variedade de eletrônicos que garantiram minha comodidade mesmo estando longe da cidade. O condomínio é extremamente seguro e de quebra pude descer até a represa para apreciar um pôr do sol excepcional. Aproveitei para pescar tranquilamente, desfrutando da privacidade e tranquilidade que a chácara oferece. Com certeza, pretendo retornar e recomendar a todos. Não posso deixar de mencionar o anfitrião, que foi muito atencioso e prestativo durante toda a minha estadia. Ah, e o melhor de tudo, a chácara fica perto de São Paulo e é de fácil acesso! Foi uma experiência que realmente valeu a pena!',
+    platform: 'Airbnb',
     image: '/images/testimonials/Gustavo.jpeg',
-    time: '2 anos no Booking'
+    time: '2 anos no Airbnb'
   },
   {
     id: '18',
     name: 'Ivanir',
-    date: 'Agosto 2022',
+    date: 'fevereiro de 2023',
     rating: 5,
-    comment: 'Tudo perfeito! Desde a recepção até o checkout. A casa é linda e super bem cuidada.',
+    comment: 'A casa é muito bem cuidada, os utensílios de cozinhas são novos. A casa estava toda limpa. O condomínio é super seguro. O alexandre foi muito solícito e me ajudou sempre que necessário. Passamos um Carnaval super bom e tranquilo com os amigos. Pretendemos voltar!',
     platform: 'Airbnb',
     image: '/images/testimonials/Ivanir.jpeg',
-    time: '3 anos no Airbnb'
+    time: '9 anos no Airbnb'
   },
   {
     id: '19',
     name: 'Jessica',
-    date: 'setembro de 2024',
+    date: 'abril de 2024',
     rating: 5,
-    comment: 'Ótimo lugar para estar com a família e amigos. Fotos correspondem com o ambiente.',
+    comment: 'Hospedagem boa, lugar tranquilo e lindo, fácil localização, anfitrião extremamente prestativo e atencioso. Adoramos e pretendemos retornar!',
     platform: 'Airbnb',
     image: '/images/testimonials/Jessica.jpeg',
-    time: '8 anos no Airbnb'
+    time: '1 ano no Airbnb'
   },
   {
     id: '20',
@@ -224,82 +224,82 @@ const testimonials: Testimonial[] = [
   {
     id: '21',
     name: 'Jonas',
-    date: 'Maio 2022',
+    date: 'fevereiro de 2024',
     rating: 5,
-    comment: 'Lugar extraordinário! A casa é muito bem equipada e os anfitriões são super atenciosos.',
-    platform: 'Booking',
+    comment: 'O Alexandre e Mari nos recebeu com muito carinho, sempre preocupados com nossa estadia, tudo muito limpo e organizado, casa bem equipada e completa, lugar bem tranquilo para quem quer descansar de verdade. Recomendo muito o local, fomos muito bem tratados pessoas muito humanas e preocupadas.',
+    platform: 'Airbnb',
     image: '/images/testimonials/Jonas.jpeg',
-    time: '2 anos no Booking'
+    time: '3 anos no Airbnb'
   },
   {
     id: '22',
     name: 'Julia',
-    date: 'Abril 2022',
+    date: 'abril de 2024',
     rating: 5,
-    comment: 'Estadia perfeita! A casa é linda e super aconchegante. O deck com vista para a represa é maravilhoso.',
+    comment: 'Alexandre e Mary extremamente atenciosos. A casa é linda e exatamente como nas fotos, super limpa. Nós nos sentimos em casa, e tivemos todo apoio dos anfitriões. Faltou água em um momento mas assim que falamos com eles, prontamente tentaram nos auxiliar. Voltaria muito!',
     platform: 'Airbnb',
     image: '/images/testimonials/Julia.jpeg',
-    time: '4 anos no Airbnb'
+    time: '5 anos no Airbnb'
   },
   {
     id: '23',
     name: 'Karine',
-    date: 'Março 2022',
+    date: 'junho de 2023',
     rating: 5,
-    comment: 'Lugar mágico! A casa é um refúgio perfeito. A vista do nascer e pôr do sol na represa é indescritível.',
+    comment: 'Alexandre é super atencioso e desde o início facilitou a comunicação e se colocou à disposição para qualquer duvida. A casa está localizada dentro de um condomínio fechado e o acesso é fácil. A casa possui acesso por uma "trilha" curtinha para a beira da represa. Há vista da casa p represa tbm - mto bonita. A piscina estava limpinha. Cozinha bem completa. Quartos confortáveis.',
     platform: 'Airbnb',
     image: '/images/testimonials/Karine.jpeg',
-    time: '3 anos no Airbnb'
+    time: '6 anos no Airbnb'
   },
   {
     id: '24',
     name: 'Leandra',
-    date: 'Fevereiro 2022',
+    date: 'dezembro de 2023',
     rating: 5,
-    comment: 'Experiência incrível! A casa é ainda mais bonita pessoalmente. Cada detalhe foi pensado com muito carinho.',
-    platform: 'Booking',
+    comment: 'Eu e minha família tivemos um Natal maravilhoso na casa. Lugar tranquilo, espaçoso, privativo, natureza maravilhosa ao redor, casa grande e aconchegante. Não precisamos levar toalhas de banho, utensílios de cozinha, tinha absolutamente tudo e um pouco mais. Churrasqueira ao lado da piscina. Custo x benefício muito bom! Anfitriões disponíveis e amáveis. Espero poder voltar em 2024!!',
+    platform: 'Airbnb',
     image: '/images/testimonials/Leandra.jpeg',
-    time: '4 anos no Booking'
+    time: '2 anos no Airbnb'
   },
   {
     id: '25',
     name: 'Luciene',
-    date: 'Janeiro 2022',
+    date: 'novembro de 2023',
     rating: 5,
-    comment: 'Tudo perfeito! A casa é maravilhosa, super bem equipada e confortável. A área externa é um espetáculo.',
+    comment: 'Adorei a casa, tudo estava em ordem, tinha papel higiênico em todos os banheiros, saco de lixo pra repor, casa limpa e organizada.',
     platform: 'Airbnb',
     image: '/images/testimonials/Luciene.jpeg',
-    time: '2 anos no Airbnb'
+    time: '1 ano no Airbnb'
   },
   {
     id: '26',
     name: 'Marcio',
-    date: 'Dezembro 2021',
+    date: 'julho de 2023',
     rating: 5,
-    comment: 'Simplesmente sensacional! Estrutura completa, ambiente acolhedor e vista deslumbrante da represa.',
-    platform: 'Booking',
+    comment: 'Fui com a minha família, desde o começo antes msm de fechar a casa, tivemos uma ótima comunicação e tiramos tds as dúvidas possíveis, resposta rápida! A casa e como nas fotos, e pessoalmente melhor ainda, lugar de paz tranquilidade, linda vista, a casa tem tudo que precisamos é muito bem equipada. O checkin foi bem flexível, e os anfitriões sempre prontos a ajudar, não tivemos problemas nenhum. Levamos nosso pet que tbm aproveitou mt o espaço que é seguro. Agradeço pelo mimo deixado! Podem ir a casa é perfeita e segura em um condomínio otimo!',
+    platform: 'Airbnb',
     image: '/images/testimonials/Marcio.jpeg',
-    time: '3 anos no Booking'
+    time: '6 anos no Airbnb'
   },
   {
     id: '27',
     name: 'Merli',
-    date: 'Novembro 2021',
+    date: 'dezembro de 2023',
     rating: 5,
-    comment: 'Casa espetacular! Passamos momentos incríveis em família. A área gourmet é um show à parte.',
+    comment: 'Tudo conforme combinado! Amei a estadia e a gentileza dos proprietários! Casa ampla e agradável! Extremamente limpa e proprietários gentis e atenciosos! #superindico #voltarei',
     platform: 'Airbnb',
     image: '/images/testimonials/Merli.jpeg',
-    time: '4 anos no Airbnb'
+    time: '8 anos no Airbnb'
   },
   {
     id: '28',
     name: 'Milena',
-    date: 'Outubro 2021',
+    date: 'janeiro de 2024',
     rating: 5,
-    comment: 'Lugar incrível! A casa é muito espaçosa e aconchegante. A piscina tem uma vista maravilhosa.',
-    platform: 'Booking',
+    comment: 'Amamos a casa do seu Alexandre, foi um fds maravilhoso com a família. Casa limpa, toalhas pra todos, roupas de cama, cozinha tem tudo que precisa, e piscina sempre limpa. Adoramos tudo, voltarei!! ✨❤️ Tirando a parte que ele esteve sempre muito apoio caso precisasse e atenção o tempo todo, tirando dúvidas e dicas. Deixou chocolate de boas vindas, muito gentil. Recomendo',
+    platform: 'Airbnb',
     image: '/images/testimonials/Milena.jpeg',
-    time: '2 anos no Booking'
+    time: '4 anos no Airbnb'
   },
   {
     id: '29',
@@ -314,12 +314,12 @@ const testimonials: Testimonial[] = [
   {
     id: '30',
     name: 'Patricia',
-    date: 'Agosto 2021',
+    date: 'outubro de 2023',
     rating: 5,
-    comment: 'Excelente estadia! Tudo muito limpo e organizado. Os anfitriões são super atenciosos.',
-    platform: 'Booking',
+    comment: 'Adoramos nossa hospedagem, tudo muito limpo , Alexandre e May sempre disponível, casa muito boa com uma sala ampla , quartos grandes organizada , lugar para descansar e curtir a família. Fomos com dois pets que foi super tranquilo porque tem muito espaço e bem seguro. Super indicamos . Logo voltaremos .',
+    platform: 'Airbnb',
     image: '/images/testimonials/Patricia.jpeg',
-    time: '4 anos no Booking'
+    time: '3 anos no Airbnb'
   },
   {
     id: '31',
@@ -334,22 +334,22 @@ const testimonials: Testimonial[] = [
   {
     id: '32',
     name: 'Rafael',
-    date: 'Junho 2021',
+    date: 'fevereiro de 2024',
     rating: 5,
-    comment: 'Lugar extraordinário! A casa superou todas as expectativas. Condomínio seguro e localização privilegiada.',
-    platform: 'Booking',
+    comment: 'Local perfeito, extremamente limpo e organizado, anfitriões sempre à disposição.',
+    platform: 'Airbnb',
     image: '/images/testimonials/Rafael.jpeg',
-    time: '2 anos no Booking'
+    time: '6 anos no Airbnb'
   },
   {
     id: '33',
     name: 'Rodolfo',
-    date: 'Maio 2021',
+    date: 'janeiro de 2024',
     rating: 5,
-    comment: 'Experiência única! A casa é perfeita em todos os aspectos. A vista para a represa é deslumbrante.',
+    comment: 'Fim de semana maravilhoso com a família e amigos, Alexandre e Mari impecáveis desde o início até o fim! Muito organizado tanto o espaço quanto as instruções prévias. Me senti muito a vontade durante toda a estadia.. recomendo',
     platform: 'Airbnb',
     image: '/images/testimonials/Rodolfo.jpeg',
-    time: '4 anos no Airbnb'
+    time: '5 anos no Airbnb'
   },
   {
     id: '34',
@@ -364,9 +364,9 @@ const testimonials: Testimonial[] = [
   {
     id: '35',
     name: 'Roseli',
-    date: 'Março 2021',
+    date: 'janeiro de 2024',
     rating: 5,
-    comment: 'Casa espetacular! Ambiente perfeito para relaxar com a família. A área externa é um verdadeiro paraíso.',
+    comment: 'Anfitrião sempre com disponibilidade para responder, muito atencioso e gentil. Casa bem espaçosa, acomodou todos muito bem.',
     platform: 'Airbnb',
     image: '/images/testimonials/Roseli.jpeg',
     time: '2 anos no Airbnb'
@@ -374,22 +374,22 @@ const testimonials: Testimonial[] = [
   {
     id: '36',
     name: 'Suzane',
-    date: 'Fevereiro 2021',
+    date: 'novembro de 2023',
     rating: 5,
-    comment: 'Lugar incrível! A casa é ainda mais bonita ao vivo. Cada detalhe foi pensado com muito carinho.',
-    platform: 'Booking',
+    comment: 'tudo em perfeito estado como esperado voltaremos em breve gratidão',
+    platform: 'Airbnb',
     image: '/images/testimonials/Suzane.jpeg',
-    time: '4 anos no Booking'
+    time: '3 anos no Airbnb'
   },
   {
     id: '37',
     name: 'Thamiris',
-    date: 'Janeiro 2021',
+    date: 'dezembro de 2023',
     rating: 5,
-    comment: 'Férias memoráveis! A casa é um verdadeiro refúgio. Estrutura completa e vista deslumbrante.',
+    comment: 'O Alexandre é muito prestativo e atencioso. O espaço estava muito bem arrumado e limpo quando chegamos, com toalhas de rosto limpas nos banheiros e sabonetes novos para banho. As camas também estavam com roupas limpas. Foi uma surpresa maravilhosa! O lugar é muito tranquilo, aproveitei muito com a minha família e nossos pets. Com certeza voltaremos! :)',
     platform: 'Airbnb',
     image: '/images/testimonials/Thamiris.jpeg',
-    time: '3 anos no Airbnb'
+    time: '9 anos no Airbnb'
   }
 ];
 
