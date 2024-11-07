@@ -404,6 +404,16 @@ const metrics = [
 
 const ITEMS_PER_PAGE = 3;
 
+// Função de embaralhamento (Fisher-Yates shuffle)
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 export default function Testimonials({}: TestimonialsProps) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { 
@@ -411,8 +421,10 @@ export default function Testimonials({}: TestimonialsProps) {
     amount: 0.2
   });
 
+  // Usar useState para manter os testimonials embaralhados consistentes durante a navegação
+  const [shuffledTestimonials] = useState(() => shuffleArray(testimonials));
   const [currentPage, setCurrentPage] = useState(0);
-  const totalPages = Math.ceil(testimonials.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(shuffledTestimonials.length / ITEMS_PER_PAGE);
   
   const nextPage = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages);
@@ -576,7 +588,7 @@ export default function Testimonials({}: TestimonialsProps) {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             initial={false}
           >
-            {testimonials
+            {shuffledTestimonials
               .slice(
                 currentPage * ITEMS_PER_PAGE,
                 (currentPage + 1) * ITEMS_PER_PAGE
