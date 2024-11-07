@@ -682,83 +682,83 @@ export default function Testimonials({}: TestimonialsProps) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={handleClose}
-              className="fixed inset-0 bg-black/80 backdrop-blur-md z-50"
-            />
-
-            {/* Card expandido */}
-            <motion.div
-              initial={{ 
-                opacity: 0,
-                scale: 0.5,
-                rotateY: 180
-              }}
-              animate={{ 
-                opacity: 1,
-                scale: 1,
-                rotateY: 360,
-                transition: {
-                  duration: 0.8,
-                  type: "spring",
-                  stiffness: 100
-                }
-              }}
-              exit={{ 
-                opacity: 0,
-                scale: 0.5,
-                rotateY: 180
-              }}
-              className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                         w-full max-w-2xl bg-white/10 backdrop-blur-xl p-12 rounded-3xl z-50
-                         border border-white/20"
+              className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center"
             >
-              {/* Botão fechar */}
-              <button
-                onClick={handleClose}
-                className="absolute top-4 right-4 text-white/60 hover:text-white
-                         transition-colors text-2xl"
+              {/* Card expandido */}
+              <motion.div
+                initial={{ 
+                  opacity: 0,
+                  scale: 0.5,
+                  rotateY: 180
+                }}
+                animate={{ 
+                  opacity: 1,
+                  scale: 1,
+                  rotateY: 360,
+                  transition: {
+                    duration: 0.8,
+                    type: "spring",
+                    stiffness: 100
+                  }
+                }}
+                exit={{ 
+                  opacity: 0,
+                  scale: 0.5,
+                  rotateY: 180
+                }}
+                className="relative w-full max-w-2xl mx-4 bg-white/10 backdrop-blur-xl p-12 rounded-3xl
+                         border border-white/20"
+                onClick={(e) => e.stopPropagation()}
               >
-                ×
-              </button>
-
-              {/* Conteúdo do card expandido */}
-              <div className="flex items-center gap-6 mb-8">
-                <motion.div 
-                  className="relative w-24 h-24 rounded-full overflow-hidden"
-                  whileHover={{ scale: 1.1 }}
+                {/* Botão fechar */}
+                <button
+                  onClick={handleClose}
+                  className="absolute top-4 right-4 text-white/60 hover:text-white
+                         transition-colors text-2xl"
                 >
-                  <Image
-                    src={selectedTestimonial.image}
-                    alt={selectedTestimonial.name}
-                    fill
-                    className="object-cover"
-                  />
-                </motion.div>
-                <div>
-                  <h3 className="text-white font-light text-2xl mb-1">
-                    {selectedTestimonial.name}
-                  </h3>
-                  <p className="text-white/60 text-lg">{selectedTestimonial.time}</p>
+                  ×
+                </button>
+
+                {/* Conteúdo do card expandido */}
+                <div className="flex items-center gap-6 mb-8">
+                  <motion.div 
+                    className="relative w-24 h-24 rounded-full overflow-hidden"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <Image
+                      src={selectedTestimonial.image}
+                      alt={selectedTestimonial.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
+                  <div>
+                    <h3 className="text-white font-light text-2xl mb-1">
+                      {selectedTestimonial.name}
+                    </h3>
+                    <p className="text-white/60 text-lg">{selectedTestimonial.time}</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex gap-1">
-                  {renderStars(selectedTestimonial.rating, true)}
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex gap-1">
+                    {renderStars(selectedTestimonial.rating, true)}
+                  </div>
+                  <span className="text-white/60 text-lg ml-2">
+                    {selectedTestimonial.date}
+                  </span>
                 </div>
-                <span className="text-white/60 text-lg ml-2">
-                  {selectedTestimonial.date}
-                </span>
-              </div>
 
-              <p className="text-white/90 font-light leading-relaxed text-xl">
-                {selectedTestimonial.comment}
-              </p>
+                <p className="text-white/90 font-light leading-relaxed text-xl">
+                  {selectedTestimonial.comment}
+                </p>
 
-              <div className="mt-8 pt-8 border-t border-white/10">
-                <span className="text-white/40 text-lg">
-                  via {selectedTestimonial.platform}
-                </span>
-              </div>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <span className="text-white/40 text-lg">
+                    via {selectedTestimonial.platform}
+                  </span>
+                </div>
+              </motion.div>
             </motion.div>
           </>
         )}
