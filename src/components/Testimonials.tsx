@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: '2',
-    name: 'Alexandre2',
+    name: 'Alexandre',
     date: 'julho de 2023',
     rating: 5,
     comment: 'Casa muito confortável, limpa e organizada, tem todos utensílios necessários para a estadia. Fica próximo de uma represa com uma paisagem sensacional, com uma vista linda de alguns quartos da casa. O anfitrião é muito solicito e gentil, adoramos nossa estadia!!',
@@ -43,7 +43,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: '3',
-    name: 'Alexandre3',
+    name: 'Alexandre',
     date: 'Novembro 2023',
     rating: 5,
     comment: 'Férias perfeitas! A casa é ainda mais bonita pessoalmente. Tudo muito organizado e funcional. O condomínio é muito seguro.',
@@ -96,7 +96,7 @@ const testimonials: Testimonial[] = [
     name: 'André',
     date: 'abril de 2024',
     rating: 5,
-    comment: 'Foi um tempo muito agradável a estada no espaço do Tadashi. Muita praticidade na cozinha (utensílios), as instruções foram bastante claras, a casa é muito aconchegante, e a natureza ao redor é maravilhosa. Apenas um contratempo: nas chácaras vizinhas (ao lado e atr��s) houve raves - mas logo que avisado, o anfitrião acionou a segurança do condomínio, e foi resolvido.',
+    comment: 'Foi um tempo muito agradável a estada no espaço do Tadashi. Muita praticidade na cozinha (utensílios), as instruções foram bastante claras, a casa é muito aconchegante, e a natureza ao redor é maravilhosa. Apenas um contratempo: nas chácaras vizinhas (ao lado e atr) houve raves - mas logo que avisado, o anfitrião acionou a segurança do condomínio, e foi resolvido.',
     platform: 'Airbnb',
     image: '/images/testimonials/Andre.jpeg',
     time: '12 anos no Airbnb'
@@ -323,7 +323,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: '31',
-    name: 'Patricia2',
+    name: 'Patricia',
     date: 'Julho 2021',
     rating: 5,
     comment: 'Casa maravilhosa! Ambiente familiar e acolhedor. A área de lazer é completa e muito bem planejada.',
