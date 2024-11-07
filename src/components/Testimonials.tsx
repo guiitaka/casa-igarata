@@ -650,7 +650,8 @@ export default function Testimonials({}: TestimonialsProps) {
                   whileHover={{ scale: 1.02, y: -5, transition: { duration: 0.5 } }}
                   onClick={() => handleTestimonialClick(testimonial)}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl
-                           hover:border-white/20 transition-colors duration-500 cursor-pointer"
+                           hover:border-white/20 transition-colors duration-500 cursor-pointer
+                           flex flex-col"
                 >
                   <div className="flex items-center gap-4 mb-6">
                     <motion.div 
@@ -680,24 +681,22 @@ export default function Testimonials({}: TestimonialsProps) {
                     </span>
                   </div>
 
-                  <div className="flex flex-col h-full">
-                    <p className="text-white/80 font-light leading-relaxed mb-4">
+                  <div className="flex-1 flex flex-col">
+                    <p className="text-white/80 font-light leading-relaxed">
                       {truncateText(testimonial.comment, MAX_COMMENT_LENGTH)}
                     </p>
                     
                     {testimonial.comment.length > MAX_COMMENT_LENGTH && (
-                      <div className="mt-auto">
-                        <span className="text-white/60 text-sm hover:text-white/80 transition-colors cursor-pointer">
-                          Ver mais...
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="flex justify-between items-center mt-4">
-                      <span className="text-white/40 text-sm">
-                        via {testimonial.platform}
+                      <span className="text-white/60 text-sm mt-2 hover:text-white/80 transition-colors cursor-pointer">
+                        Ver mais...
                       </span>
-                    </div>
+                    )}
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <span className="text-white/40 text-sm">
+                      via {testimonial.platform}
+                    </span>
                   </div>
                 </motion.div>
               ))}
