@@ -174,12 +174,12 @@ const testimonials: Testimonial[] = [
   {
     id: '16',
     name: 'Giulia',
-    date: 'Outubro 2022',
+    date: '3 semanas atrás',
     rating: 5,
-    comment: 'Experiência única! A localização é perfeita, o condomínio é muito seguro e a casa é um sonho.',
+    comment: 'Alexandre é uma pessoa sensacional! No dia da viagem enviou pelo chat diversas informações, dicas e foi muito prestativo. Estava de prontidão para tirar qualquer dúvida! Nossa estadia foi muito boa, o ambiente é bem familiar e a casa muito linda. Nós adoramos a experiência!',
     platform: 'Airbnb',
     image: '/images/testimonials/Giulia.jpeg',
-    time: '4 anos no Airbnb'
+    time: '6 anos no Airbnb'
   },
   {
     id: '17',
@@ -204,12 +204,12 @@ const testimonials: Testimonial[] = [
   {
     id: '19',
     name: 'Jessica',
-    date: 'Julho 2022',
+    date: 'setembro de 2024',
     rating: 5,
-    comment: 'Casa espetacular! Ambiente familiar e acolhedor. A piscina e a área de lazer são incríveis.',
-    platform: 'Booking',
+    comment: 'Ótimo lugar para estar com a família e amigos. Fotos correspondem com o ambiente.',
+    platform: 'Airbnb',
     image: '/images/testimonials/Jessica.jpeg',
-    time: '4 anos no Booking'
+    time: '8 anos no Airbnb'
   },
   {
     id: '20',
@@ -354,12 +354,12 @@ const testimonials: Testimonial[] = [
   {
     id: '34',
     name: 'Rose',
-    date: 'Abril 2021',
+    date: 'julho de 2024',
     rating: 5,
-    comment: 'Tudo impecável! Desde a recepção até o checkout. A casa é linda e muito bem equipada.',
-    platform: 'Booking',
+    comment: 'Alexandre e Mary foram super prestativos, deram todas as orientações e suporte necessários, apresentaram a casa previamente por vídeo e estavam sempre disponíveis. A casa estava super limpa e organizada, simplesmente maravilhosa. Casa ampla, arejada, uma excelente iluminação natural e com visual para a represa, o que nos garantiu um final de semana incrível. Se você quiser repor as energias, esse com certeza é o lugar certo. Recomendamos à todos, eles realmente são super hosts.',
+    platform: 'Airbnb',
     image: '/images/testimonials/Rose.jpeg',
-    time: '3 anos no Booking'
+    time: '6 anos no Airbnb'
   },
   {
     id: '35',
