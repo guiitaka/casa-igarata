@@ -18,7 +18,7 @@ export default function Header() {
             Casa Igaratá
           </a>
 
-          {/* Menu Desktop - Mantido exatamente igual ao original */}
+          {/* Menu Desktop */}
           <nav className="hidden lg:flex items-center gap-12">
             <a 
               href="#features" 
@@ -56,7 +56,6 @@ export default function Header() {
               Contato
             </a>
 
-            {/* Botão Reserve Agora */}
             <a
               href="#contact"
               className="px-6 py-2 bg-transparent border border-white/20
@@ -68,7 +67,7 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* Botão Menu Mobile - Só aparece em telas pequenas */}
+          {/* Botão Menu Mobile */}
           <button 
             onClick={toggleMenu}
             className="lg:hidden text-white p-2"
@@ -78,7 +77,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Menu Mobile - Só aparece em telas pequenas */}
+      {/* Menu Mobile */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -137,4 +136,4 @@ export default function Header() {
       </AnimatePresence>
     </header>
   );
-}
+} 
