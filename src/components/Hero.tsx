@@ -46,19 +46,19 @@ export default function Hero({}: HeroProps) {
 
       {/* Texto Principal e Botão */}
       <div 
-        className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4"
+        className="relative z-10 h-full flex flex-col items-center justify-center text-white"
       >
         <h1 
           ref={textRef}
-          className="text-[52px] lg:text-[120px] font-extralight leading-none tracking-tight mb-8 lg:mb-12 text-center"
+          className="text-[120px] font-extralight leading-none tracking-tight mb-12"
         >
           Você merece isso
         </h1>
         
         <a 
           href="#features"
-          className="px-6 lg:px-8 py-3 bg-white/10 backdrop-blur-sm rounded-full 
-                   text-xl lg:text-2xl font-extralight tracking-wide text-white 
+          className="px-8 py-3 bg-white/10 backdrop-blur-sm rounded-full 
+                   text-2xl font-extralight tracking-wide text-white 
                    transition-colors duration-300 
                    hover:bg-white/20"
         >
