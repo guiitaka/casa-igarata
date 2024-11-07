@@ -82,7 +82,7 @@ export default function Testimonials({}: TestimonialsProps) {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1.2 }}
           className="text-4xl font-light text-center text-white mb-4"
         >
           Avaliações
@@ -90,7 +90,7 @@ export default function Testimonials({}: TestimonialsProps) {
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 1.2, delay: 0.4 }}
           className="text-white/60 text-center font-light mb-24 max-w-2xl mx-auto"
         >
           O que nossos hóspedes dizem sobre sua experiência
@@ -103,7 +103,7 @@ export default function Testimonials({}: TestimonialsProps) {
                 <motion.div
                   initial={{ rotate: -180, opacity: 0 }}
                   animate={isInView ? { rotate: 0, opacity: 1 } : {}}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 1.2 }}
                 >
                   <FaStar className="w-10 h-10 text-yellow-400" />
                 </motion.div>
@@ -111,7 +111,7 @@ export default function Testimonials({}: TestimonialsProps) {
                   <motion.h3 
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ duration: 0.6, delay: 0.3 }}
+                    transition={{ duration: 1.2, delay: 0.6 }}
                     className="text-7xl font-light text-white"
                   >
                     5
@@ -167,12 +167,12 @@ export default function Testimonials({}: TestimonialsProps) {
                 key={metric.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
                 className="flex items-center gap-4"
               >
                 <motion.div
                   animate={{ rotate: [0, 5, -5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                  transition={{ duration: 3, repeat: Infinity, repeatDelay: 4 }}
                 >
                   <metric.icon className="w-6 h-6 text-white/30" />
                 </motion.div>
@@ -196,8 +196,8 @@ export default function Testimonials({}: TestimonialsProps) {
               key={testimonial.id}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ scale: 1.02, y: -5 }}
+              transition={{ duration: 1.2, delay: 0.4 + index * 0.3 }}
+              whileHover={{ scale: 1.02, y: -5, transition: { duration: 0.5 } }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl
                        hover:border-white/20 transition-colors duration-500"
             >
