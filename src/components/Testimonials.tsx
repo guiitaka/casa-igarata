@@ -23,24 +23,114 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Maria Silva',
+    name: 'Alexandre',
     date: 'Janeiro 2024',
     rating: 5,
-    comment: 'Casa incrível! Superou todas as expectativas. Ambiente limpo, organizado e acolhedor. Voltaremos com certeza!',
+    comment: 'Lugar excepcional! A casa superou todas as expectativas. Ambiente espaçoso, limpo e muito bem cuidado. A vista para a represa é de tirar o fôlego.',
     platform: 'Airbnb',
-    image: '/images/review-left.jpg',
-    time: '3 anos no Airbnb'
+    image: '/images/testimonials/Alexandre.jpeg',
+    time: '6 anos no Airbnb'
   },
   {
     id: '2',
-    name: 'João Santos',
+    name: 'Alexandre2',
     date: 'Dezembro 2023',
     rating: 5,
-    comment: 'Lugar perfeito para descansar com a família. A piscina é ótima e a vista é deslumbrante.',
+    comment: 'Experiência incrível! A área externa é um verdadeiro paraíso. Piscina impecável e área gourmet completa. Ideal para famílias.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Alexandre2.jpeg',
+    time: '4 anos no Airbnb'
+  },
+  {
+    id: '3',
+    name: 'Alexandre3',
+    date: 'Novembro 2023',
+    rating: 5,
+    comment: 'Férias perfeitas! A casa é ainda mais bonita pessoalmente. Tudo muito organizado e funcional. O condomínio é muito seguro.',
     platform: 'Booking',
-    image: '/images/review-right.jpg',
-    time: '2 anos no Booking'
-  }
+    image: '/images/testimonials/Alexandre3.jpeg',
+    time: '3 anos no Booking'
+  },
+  {
+    id: '4',
+    name: 'Aline',
+    date: 'Outubro 2023',
+    rating: 5,
+    comment: 'Simplesmente maravilhoso! Cada detalhe da casa foi pensado com muito carinho. A vista do nascer do sol é indescritível.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Aline.jpeg',
+    time: '2 anos no Airbnb'
+  },
+  {
+    id: '5',
+    name: 'Amanda',
+    date: 'Setembro 2023',
+    rating: 5,
+    comment: 'Um verdadeiro refúgio! Lugar perfeito para relaxar e recarregar as energias. A comunicação com os anfitriões foi excelente.',
+    platform: 'Booking',
+    image: '/images/testimonials/Amanda.jpeg',
+    time: '5 anos no Booking'
+  },
+  {
+    id: '6',
+    name: 'Ana Paula',
+    date: 'Agosto 2023',
+    rating: 5,
+    comment: 'Casa espetacular! Todos os ambientes são muito aconchegantes. A cozinha é um sonho para quem gosta de cozinhar.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Ana Paula.jpeg',
+    time: '3 anos no Airbnb'
+  },
+  {
+    id: '7',
+    name: 'Ana Silvia',
+    date: 'Julho 2023',
+    rating: 5,
+    comment: 'Fim de semana perfeito! A casa é linda e super bem equipada. O deck com vista para a represa é um diferencial incrível.',
+    platform: 'Booking',
+    image: '/images/testimonials/Ana Silvia.jpeg',
+    time: '4 anos no Booking'
+  },
+  {
+    id: '8',
+    name: 'Andre',
+    date: 'Junho 2023',
+    rating: 5,
+    comment: 'Lugar incrível! Passamos dias maravilhosos em família. A estrutura da casa é completa e muito confortável.',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Andre.jpeg',
+    time: '2 anos no Airbnb'
+  },
+  {
+    id: '9',
+    name: 'Camilla',
+    date: 'Maio 2023',
+    rating: 5,
+    comment: 'Experiência única! A casa é um verdadeiro paraíso. Tudo muito limpo e organizado. Voltaremos com certeza!',
+    platform: 'Booking',
+    image: '/images/testimonials/Camilla.jpeg',
+    time: '3 anos no Booking'
+  },
+  {
+    id: '10',
+    name: 'Cassio',
+    date: 'Abril 2023',
+    rating: 5,
+    comment: 'Férias inesquecíveis! A casa é maravilhosa e os anfitriões são muito atenciosos. Recomendo fortemente!',
+    platform: 'Airbnb',
+    image: '/images/testimonials/Cassio.jpeg',
+    time: '4 anos no Airbnb'
+  },
+  {
+    id: '11',
+    name: 'Danilo',
+    date: 'Março 2023',
+    rating: 5,
+    comment: 'Local excepcional! A casa é um verdadeiro refúgio. Perfeita para momentos em família e com amigos.',
+    platform: 'Booking',
+    image: '/images/testimonials/Danilo.jpeg',
+    time: '3 anos no Booking'
+  },
 ];
 
 const metrics = [
