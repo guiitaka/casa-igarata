@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
-import { FaWifi, FaSwimmingPool, FaShieldAlt, FaUtensils, FaParking, FaTv, FaWater } from 'react-icons/fa';
+import { FaWifi, FaSwimmingPool, FaUtensils, FaParking, FaTv, FaSnowflake } from 'react-icons/fa';
 import FeaturesMobile from './FeaturesMobile';
 
 export default function Features() {
@@ -65,10 +65,10 @@ export default function Features() {
               {[
                 { icon: FaWifi, title: "Wi-Fi", desc: "Internet de alta velocidade" },
                 { icon: FaSwimmingPool, title: "Piscina", desc: "Área de lazer completa" },
-                { icon: FaShieldAlt, title: "Segurança 24h", desc: "Monitoramento integral" },
-                { icon: FaUtensils, title: "Área Gourmet", desc: "Totalmente equipada" },
+                { icon: FaUtensils, title: "Cozinha", desc: "Totalmente equipada" },
+                { icon: FaParking, title: "Garagem", desc: "Estacionamento coberto" },
                 { icon: FaTv, title: "Smart TV", desc: "Com streaming" },
-                { icon: FaWater, title: "Acesso à Represa", desc: "Vista privilegiada" },
+                { icon: FaSnowflake, title: "Ar Condicionado", desc: "Em todos os quartos" },
               ].map((feature, index) => (
                 <motion.div
                   key={feature.title}
