@@ -77,9 +77,9 @@ export default function Contact({}: ContactProps) {
             <div className="p-8 rounded-3xl bg-white/5 backdrop-blur-sm">
               <h3 className="text-2xl font-light text-white mb-6">Informações de Contato</h3>
               <div className="space-y-4">
-                <a href="tel:+1234567890" className="flex items-center text-white/60 hover:text-white transition-colors">
+                <a href="tel:+5511971302002" className="flex items-center text-white/60 hover:text-white transition-colors">
                   <FaPhone className="w-5 h-5 mr-4" />
-                  <span className="font-light">+55 (11) 99999-9999</span>
+                  <span className="font-light">+55 (11) 97130-2002</span>
                 </a>
                 <a href="mailto:contato@example.com" className="flex items-center text-white/60 hover:text-white transition-colors">
                   <FaEnvelope className="w-5 h-5 mr-4" />
