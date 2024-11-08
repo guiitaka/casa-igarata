@@ -14,7 +14,7 @@ export default function Footer({}: FooterProps) {
           <div>
             <h4 className="text-white font-light mb-6">Sobre Nós</h4>
             <p className="text-white/60 font-light mb-6">
-              Casa Igaratá é seu refúgio perfeito para momentos especiais. 
+              Chácara Azul é seu refúgio perfeito para momentos especiais. 
               Localizada em um condomínio exclusivo com vista privilegiada para a represa.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function Footer({}: FooterProps) {
         </div>
 
         <div className="border-t border-white/10 mt-16 pt-8 text-center text-white/60 font-light">
-          <p>&copy; {new Date().getFullYear()} Casa Igaratá. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Chácara Azul. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
