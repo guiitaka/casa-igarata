@@ -349,7 +349,7 @@ export default function Gallery({}: GalleryProps) {
   }, [nextSlide, prevSlide]);
 
   return (
-    <section className="min-h-screen bg-black py-24" id="galeria">
+    <section id="gallery" className="min-h-screen bg-black py-24" {...handlers}>
       <div className="container mx-auto px-4 mb-16">
         <h2 className="text-4xl font-light text-white text-center mb-4">
           Galeria
