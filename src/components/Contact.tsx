@@ -83,7 +83,7 @@ export default function Contact({}: ContactProps) {
                 </a>
                 <a href="mailto:contato@example.com" className="flex items-center text-white/60 hover:text-white transition-colors">
                   <FaEnvelope className="w-5 h-5 mr-4" />
-                  <span className="font-light">contato@casaigarata.com.br</span>
+                  <span className="font-light">contato@chacaraazul.com.br</span>
                 </a>
                 <a href="#" className="flex items-center text-white/60 hover:text-white transition-colors">
                   <FaWhatsapp className="w-5 h-5 mr-4" />
