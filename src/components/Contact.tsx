@@ -67,7 +67,7 @@ export default function Contact({}: ContactProps) {
                 type="submit"
                 className="w-full bg-white text-black py-4 rounded-lg font-light hover:bg-white/90 transition-colors"
               >
-                Agendar visita
+                Agendar Reserva
               </button>
             </form>
           </div>
